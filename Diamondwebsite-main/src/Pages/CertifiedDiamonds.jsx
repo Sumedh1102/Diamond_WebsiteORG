@@ -1,5 +1,5 @@
 import React from 'react';
-import heroImage from '../assets/certified_diamonds_hero.png';
+import heroImage from '../../certified_diamonds_hero.png';
 
 const CertifiedDiamonds = () => {
     return (
@@ -8,13 +8,13 @@ const CertifiedDiamonds = () => {
             <div className="relative h-[60vh] flex items-center justify-center overflow-hidden">
                 <img
                     src={heroImage}
-                    alt="Certified Diamonds"
+                    alt="IGI Certified Diamonds"
                     className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-black/40" />
                 <div className="relative text-center px-6">
                     <h1 className="text-white text-5xl md:text-7xl font-light tracking-widest mb-4">
-                        CERTIFIED DIAMONDS
+                        IGI CERTIFIED DIAMONDS
                     </h1>
                     <p className="text-white text-xl md:text-2xl font-light max-w-2xl mx-auto">
                         Peace of mind with every sparkle, guaranteed by world-class grading.

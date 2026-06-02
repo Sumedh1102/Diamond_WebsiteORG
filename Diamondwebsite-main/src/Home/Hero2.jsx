@@ -8,34 +8,34 @@ export default function DiamondFeatureSection() {
     const features = [
         {
             id: 1,
-            icon: Ruler,
-            text: "Size of Diamond",
-            subtitle: "0.01 cts — 35 Carats",
-            description:
-                "Explore our extensive collection of lab-grown diamonds, ranging from 0.01cts to 35 Carats, catering to every design requirement.",
-        },
-        {
-            id: 2,
-            icon: BadgeCheck,
-            text: "Certificate",
-            subtitle: "IGI & GIA Certified",
-            description:
-                "Every diamond is meticulously graded and certified by leading gemological institutes like IGI and GIA, ensuring peace of mind.",
-        },
-        {
-            id: 3,
             icon: Gem,
             text: "Product",
             subtitle: "CVD & HPHT Diamonds",
             description:
                 "Browse our premium inventory of lab-grown diamonds, available in various shapes, clarities, and cuts for your perfect choice.",
         },
+        {
+            id: 2,
+            icon: Ruler,
+            text: "Size of Diamond",
+            subtitle: "0.001 cts — 35+ Carats",
+            description:
+                "Explore our extensive collection of lab-grown diamonds, ranging from 0.001cts to 35+ Carats, catering to every design requirement.",
+        },
+        {
+            id: 3,
+            icon: BadgeCheck,
+            text: "Certificate",
+            subtitle: "IGI & GIA Certified",
+            description:
+                "Every diamond is meticulously graded and certified by leading gemological institutes like IGI and GIA, ensuring peace of mind.",
+        },
     ];
 
     const [activeFeature, setActiveFeature] = useState(features[0]);
 
     return (
-        <section className="w-full bg-[#1A1A1A] py-20 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-12">
+        <section className="w-full bg-[#1A1A1A] pt-20 sm:pt-24 lg:pt-32 px-4 sm:px-6 lg:px-12">
             <div className="max-w-7xl mx-auto">
                 {/* Main Content Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
@@ -99,20 +99,6 @@ export default function DiamondFeatureSection() {
                                             </span>
                                         </div>
                                     </div>
-
-                                    {/* Arrow */}
-                                    <div
-                                        className={`
-                                            rounded-full p-2.5 sm:p-3 transition-all duration-300
-                                            ${isActive
-                                                ? "bg-[#B88A6A] text-white shadow-lg shadow-[#B88A6A]/20"
-                                                : "bg-white/5 text-white/25 group-hover:bg-white/10 group-hover:text-white/40"}
-                                        `}
-                                    >
-                                        <ArrowRight className={`w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 ${
-                                            isActive ? "translate-x-0.5" : ""
-                                        }`} />
-                                    </div>
                                 </div>
                             );
                         })}
@@ -149,7 +135,7 @@ export default function DiamondFeatureSection() {
                                 </p>
 
                                 {/* Product-specific CTA */}
-                                {activeFeature.id === 3 && (
+                                {activeFeature.id === 1 && (
                                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                                         <button
                                             onClick={() => navigate("/loose-diamonds")}
@@ -168,16 +154,7 @@ export default function DiamondFeatureSection() {
                                     </div>
                                 )}
 
-                                {/* General CTA for non-product features */}
-                                {activeFeature.id !== 3 && (
-                                    <button
-                                        className="inline-flex items-center gap-3 text-[#B88A6A] text-sm tracking-wider font-light
-                                                   hover:gap-4 transition-all duration-300 group"
-                                    >
-                                        Learn More
-                                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                                    </button>
-                                )}
+
                             </div>
 
                         </div>

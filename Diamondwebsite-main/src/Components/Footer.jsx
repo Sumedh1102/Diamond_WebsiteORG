@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function LuxuryFooter() {
   return (
@@ -10,9 +11,9 @@ export default function LuxuryFooter() {
           <div>
             <h3 className="text-white text-lg font-semibold mb-6">Address</h3>
             <p className="text-gray-400 leading-relaxed">
-              23 - Sunrise Chambers, beside<br />
-              Princess Plaza, MiniBazar,<br />
-              Varachha Road Surat - 395006
+              CE-5010 Bharat Diamond Bourse,<br />
+              G block Bandra Kurla Complex,<br />
+              Mumbai - 400051
             </p>
           </div>
 
@@ -21,29 +22,29 @@ export default function LuxuryFooter() {
             <h3 className="text-white text-lg font-semibold mb-6">Link</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#home" className="text-gray-400 hover:text-white transition-colors uppercase text-sm tracking-wide">
+                <Link to="/" className="text-gray-400 hover:text-white transition-colors uppercase text-sm tracking-wide">
                   HOME
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#about" className="text-gray-400 hover:text-white transition-colors uppercase text-sm tracking-wide">
+                <Link to="/About" className="text-gray-400 hover:text-white transition-colors uppercase text-sm tracking-wide">
                   ABOUT US
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#products" className="text-gray-400 hover:text-white transition-colors uppercase text-sm tracking-wide">
+                <Link to="/products" className="text-gray-400 hover:text-white transition-colors uppercase text-sm tracking-wide">
                   OUR PRODUCTS
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#blogs" className="text-gray-400 hover:text-white transition-colors uppercase text-sm tracking-wide">
+                <Link to="/Blogs" className="text-gray-400 hover:text-white transition-colors uppercase text-sm tracking-wide">
                   BLOGS
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contact" className="text-gray-400 hover:text-white transition-colors uppercase text-sm tracking-wide">
+                <Link to="/Contact" className="text-gray-400 hover:text-white transition-colors uppercase text-sm tracking-wide">
                   CONTACT
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -77,11 +78,11 @@ export default function LuxuryFooter() {
               <a href="mailto:navkardiamonds@gmail.com" className="text-gray-400 hover:text-white transition-colors block text-sm">
                 navkardiamonds@gmail.com
               </a>
-              <a href="tel:+917567421124" className="text-white hover:text-gray-300 transition-colors block text-lg font-medium">
-                +91 75674 21124
+              <a href="tel:+919920752390" className="text-white hover:text-gray-300 transition-colors block text-lg font-medium">
+                +91 99207 52390
               </a>
-              <a href="tel:+919714107775" className="text-white hover:text-gray-300 transition-colors block text-lg font-medium">
-                +91 97141 07775
+              <a href="tel:+919261619050" className="text-white hover:text-gray-300 transition-colors block text-lg font-medium">
+                +91 92616 19050
               </a>
             </div>
           </div>
@@ -98,9 +99,7 @@ export default function LuxuryFooter() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Brand Logo */}
           <div className="flex items-center gap-2">
-            <span className="text-white text-xl font-light tracking-widest">NAV</span>
-            <span className="text-[#c9a961] text-xl font-light">KAR</span>
-            <span className="text-white text-xl font-light tracking-widest ml-2">DIAMONDS</span>
+            <img src="https://i.ibb.co/XZ0B29FV/NAV.png" alt="NAV Diamonds Logo" className="h-12 w-auto object-contain mix-blend-lighten" />
           </div>
 
           {/* Copyright */}

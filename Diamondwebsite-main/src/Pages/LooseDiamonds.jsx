@@ -3,39 +3,41 @@ import heroImage from '../assets/loose_diamonds_hero.png';
 
 const diamondCategories = [
     {
+        title: 'LOOSE DIAMONDS',
+        description: `Loose Diamonds are Diamonds that have been cut and polished but are not yet set into jewelry. They are sold separately, allowing the buyer to choose their preferred size, shape, and quality of the diamond, and then have it set into a piece of jewelry or kept as an investment.
+
+Loose Diamonds come in a wide range of sizes, shapes, colors, and clarities. The most popular shape for Loose Diamonds is the round brilliant, which is designed to maximize the Diamond's sparkle and brilliance. Other popular shapes include the princess, emerald, oval, pear, and marquise.
+
+When purchasing a loose diamond, it's important to consider the Diamond's 4Cs - Cut, Color, Clarity, and Carat weight - which determine its overall quality and value. The cut of the Diamond refers to its proportions and how well it reflects light, while the color refers to the Diamond's hue and saturation. Clarity refers to the presence of inclusions and blemishes in the Diamond, and Carat weight is the measurement of the diamond's size and weight.
+
+Loose Diamonds from DIYORA offers a great deal of flexibility and customization for those looking to purchase a Diamond for an engagement ring, special occasion, or investment.`,
+        image: heroImage,
+    },
+        {
         title: 'White',
         tagline: 'Absolutely colorless.',
-        description: 'Premium white diamonds known for their brilliance and clarity. These diamonds represent the purest form and are ideal for luxury jewelry pieces.',
+        description: `Premium white diamonds known for their brilliance and clarity. These diamonds represent the purest form and are ideal for luxury jewelry pieces.
+
+Color : D to H color IF to SI3 quality Size in carat : 0.003 ct to 0.35 ct Size in mm : 0.8 mm to 4.2 mm`,
         image: heroImage,
     },
     {
-        title: 'Brown',
-        tagline: 'Warm and natural.',
-        description: 'Brown diamonds offer a warm and natural tone. They are often used in elegant and earthy jewelry designs and provide a unique aesthetic compared to traditional white diamonds.',
+        title: '100+ Shapes',
+        tagline: '100+ Shapes',
+        description: `Yes, you read it right!, Our artistic workshop delivers diamonds with a personal touch that brings undisputed elegance, customization and unsurpassed quality to your jewellery.
+
+Fancy shape Diamonds are any Diamonds that are not round in shape, such as princess, emerald, oval, pear, marquise, heart, and cushion cuts. These shapes are less common than the traditional round brilliant cut and can offer a unique look to a piece of jewelry. The value of a fancy shape diamond is based on the same 4Cs as a round diamond - cut, color, clarity, and carat weight. We can create diamonds of any shape in 30 days. Diamond shapes range from rounded to sharp angles. For example, oval cuts are extremely versatile and can fit into jewelry designs of all kinds. Princess cuts are popular with consumers who want a more attractive stone with a better cut.`,
         image: heroImage,
     },
     {
-        title: 'Light Brown',
-        tagline: 'Light brown diamonds.',
-        description: 'A softer shade of brown diamonds with subtle color. Perfect for delicate jewelry pieces and modern designs.',
-        image: heroImage,
-    },
-    {
-        title: 'Yellow',
-        tagline: 'Light yellow diamonds.',
-        description: 'Yellow diamonds display a warm golden tone and are valued for their distinctive color and rarity.',
-        image: heroImage,
-    },
-    {
-        title: 'Cognac',
-        tagline: 'Champagne or cognac diamonds.',
-        description: 'These diamonds have a rich brownish tone resembling cognac or champagne colors. Popular for luxurious and bold jewelry styles.',
-        image: heroImage,
-    },
-    {
-        title: 'Black',
-        tagline: 'Heat Treated Black diamonds.',
-        description: 'Black diamonds offer a bold and dramatic appearance. Often used in modern and high-fashion jewelry pieces.',
+        title: '30+ Fancy Colors',
+        description: `With around 40+ years of experience and expertise in creating seamlessly authentic Diamonds, Diyora Diamond has proudly built a successful track record of crafting one-of-a-kind Diamonds in over 30 fancy colors.
+
+We have a built-in inventory to deliver you your customized color within 30 days, be it any shade or tone.
+
+Chemically pure and structurally perfect Diamonds are colorless. Thankfully nature is not always perfect, and as a result, small traces of impurities or structural discrepancies result in Diamonds that exhibit different colors. If these occur in high enough concentrations, Diamonds exhibit strong and vibrant displays of color, known as fancy color.
+
+Fancy colored Diamonds are exceedingly rare compared to their colorless counterparts. Furthermore, their rarity is enhanced by the intensity of their color, and some fancy color are more rare than others.`,
         image: heroImage,
     },
 ];
@@ -180,9 +182,11 @@ const LooseDiamonds = () => {
                                                 </p>
                                             </div>
                                         )}
-                                        <p className="text-white/40 text-base sm:text-lg leading-relaxed font-light max-w-lg">
-                                            {category.description}
-                                        </p>
+                                        <div className="text-white/40 text-base sm:text-lg leading-relaxed font-light max-w-lg space-y-4">
+                                            {category.description.split('\n\n').map((para, i) => (
+                                                <p key={i}>{para}</p>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
                             </div>

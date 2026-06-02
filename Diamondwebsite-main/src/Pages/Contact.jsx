@@ -51,18 +51,18 @@ export default function LuxuryContact() {
             <div className="space-y-4 pt-8">
               <div>
                 <a 
-                  href="tel:+917567421124" 
+                  href="tel:+919920752390" 
                   className="text-3xl md:text-4xl font-semibold text-[#d4a574] hover:text-[#e8bc8a] transition-colors block pb-2 border-b border-[#d4a574]/30"
                 >
-                  +91 75674 21124
+                  +91 99207 52390
                 </a>
               </div>
               <div>
                 <a 
-                  href="tel:+919714107775" 
+                  href="tel:+919261619050" 
                   className="text-3xl md:text-4xl font-semibold text-[#d4a574] hover:text-[#e8bc8a] transition-colors block pb-2 border-b border-[#d4a574]/30"
                 >
-                  +91 97141 07775
+                  +91 92616 19050
                 </a>
               </div>
             </div>

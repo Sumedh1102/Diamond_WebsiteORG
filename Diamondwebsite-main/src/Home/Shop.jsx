@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 const DiamondShapesSlider = () => {
+  const navigate = useNavigate();
   const [isAnimating, setIsAnimating] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const scrollRef = useRef(null);
@@ -75,18 +77,24 @@ const DiamondShapesSlider = () => {
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 lg:gap-8 w-full lg:w-auto">
 
             <div className="flex gap-3">
-              <button
-                onClick={() => scroll("left")}
-                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-gray-600 text-white hover:border-white transition"
-              >
-                ‹
-              </button>
-              <button
-                onClick={() => scroll("right")}
-                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-gray-600 text-white hover:border-white transition"
-              >
-                ›
-              </button>
+                <button
+                  onClick={() => scroll("left")}
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-gray-600 text-white hover:border-white transition"
+                >
+                  ‹
+                </button>
+                <button
+                  onClick={() => scroll("right")}
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-gray-600 text-white hover:border-white transition"
+                >
+                  ›
+                </button>
+                <button
+                  onClick={() => navigate('/diamonds')}
+                  className="ml-4 px-4 py-2 bg-white text-black rounded-full hover:bg-gray-200 transition"
+                >
+                  Explore
+                </button>
             </div>
           </div>
         </div>

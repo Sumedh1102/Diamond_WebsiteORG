@@ -12,18 +12,35 @@ const DiamondStorytelling = () => {
       label: "SERVICES",
       heading: "Calibrated Parcels",
       description: "Our calibrated diamond parcels offer precision-sized stones measured to exact millimetre tolerances. Perfectly uniform and ready for setting, they are the ideal choice for high-volume jewellery production.",
-      image: "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=800&h=1000&fit=crop",
+      image: "https://i.ibb.co/CKft79CC/Screenshot-2026-05-29-at-11-20-55-AM.png",
       cta: { label: "Explore Calibrated Parcels", route: "/calibrated-service-details" }
+    },
+    {
+      id: 4,
+      label: "MATCHING LAYOUT",
+      heading: "Matching Layout",
+      description: "Our calibrated matching layouts (10–99 cents, 0.10 MM tolerance) ensure precise uniformity in shape, color, clarity, dimensions, and cent values.",
+      image: "/images/matching_layout.png",
+      cta: { label: "Explore Matching Layouts", route: "/matching-layouts" }
+    },
+    {
+      id: 5,
+      label: "30+ COLORS",
+      heading: "30+ colors",
+      description: "We specialize in unique colored diamonds across 10+ fancy shades, with customized color delivery guaranteed within 20 days.",
+      image: "/images/fancy_colored_diamonds.png",
+      cta: { label: "Explore Colors", route: "/fancy-colors" }
     },
     {
       id: 3,
       label: "JEWELLERY",
       heading: "World of Jewellery",
       description: "From solitaire rings to intricate multi-stone pieces, our bespoke jewellery service brings your vision to life. We combine masterful craftsmanship with our finest lab-grown diamonds for creations that last a lifetime.",
-      image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&h=1000&fit=crop",
+      image: "https://i.ibb.co/gMjYq5wz/image.png",
       cta: { label: "Explore Jewellery", route: "/jewellery" }
     }
   ];
+
 
   useEffect(() => {
     const observers = sectionsRef.current.map((section, index) => {

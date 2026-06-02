@@ -84,7 +84,7 @@ const steps = [
         detail:
             "Lab-grown diamonds receive the same grades as mined diamonds on the exact same 4C scale. There is zero difference in physical, chemical, or optical properties.",
         stat: { label: "Graded By", value: "IGI / GIA" },
-        image: "/images/process/seed_selection.png",
+        image: "/images/process/certification.png",
     },
 ];
 
@@ -105,7 +105,7 @@ const methods = [
         description:
             "Replicates the Earth's mantle conditions — extreme pressure (1.5M PSI) and heat (1,500 °C) — to crystallise carbon around a seed. The oldest and most established lab-diamond method.",
         highlights: ["Proven technology", "Faster growth", "Strong crystal structure", "Cost effective"],
-        image: "/images/process/crystal_growth.png",
+        image: "/images/process/hpht_process.png",
     },
 ];
 

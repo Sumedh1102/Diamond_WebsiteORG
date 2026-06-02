@@ -54,19 +54,13 @@ export default function LuxuryNavigation() {
   }, [isMobileMenuOpen]);
 
   return (
-    <div className="w-full bg-[#1A1A1A]">
+    <div className="w-full bg-black">
       <nav className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-12 h-16 sm:h-20 flex items-center justify-between">
 
         {/* Brand Logo */}
         <div className="flex items-center flex-shrink-0">
-          <NavLink to="/" className="text-white font-light tracking-wider">
-            <div className="flex items-center">
-              <span className="text-base font-semibold sm:text-lg lg:text-xl">Nav</span>
-              <span className="text-base sm:text-lg lg:text-xl text-[#B88A6A] mx-0.5 sm:mx-1">Lab</span>
-            </div>
-            <div className="text-[10px] sm:text-xs tracking-widest mt-0.5 text-white/90 uppercase">
-              DIAMONDS
-            </div>
+          <NavLink to="/" className="flex items-center">
+            <img src="https://i.ibb.co/XZ0B29FV/NAV.png" alt="NAV Diamonds Logo" className="h-12 sm:h-14 w-auto object-cover bg-black rounded-xl px-5" />
           </NavLink>
         </div>
 
@@ -87,6 +81,7 @@ export default function LuxuryNavigation() {
               ) : (
                 <NavLink
                   to={link.path}
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className={({ isActive }) =>
                     `text-xs xl:text-sm tracking-wider transition-colors duration-200 relative group ${isActive ? 'text-[#B88A6A]' : 'text-white hover:text-[#B88A6A]'
                     }`
@@ -119,6 +114,7 @@ export default function LuxuryNavigation() {
                               <NavLink
                                 key={nested.name}
                                 to={nested.path}
+                                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                                 className="block px-6 py-4 text-xs tracking-widest text-white hover:text-[#B88A6A] hover:bg-white/5 transition-all duration-200"
                               >
                                 {nested.name}
@@ -129,6 +125,7 @@ export default function LuxuryNavigation() {
                       ) : (
                         <NavLink
                           to={sub.path}
+                          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                           className="block px-6 py-4 text-xs tracking-widest text-white hover:text-[#B88A6A] hover:bg-white/5 transition-all duration-200"
                         >
                           {sub.name}
@@ -144,7 +141,7 @@ export default function LuxuryNavigation() {
 
         {/* Desktop CTA */}
         <a 
-          href="https://wa.me/919714107775?text=Hello,%20I%20have%20an%20inquiry%20regarding%20diamonds."
+          href="https://wa.me/919920752390?text=Hello,%20I%20have%20an%20inquiry%20regarding%20diamonds."
           target="_blank"
           rel="noopener noreferrer"
           className="hidden lg:flex items-center bg-[#B88A6A] hover:bg-[#A67958] text-white px-6 xl:px-8 py-2.5 xl:py-3 transition-all duration-300 hover:shadow-lg hover:shadow-[#B88A6A]/20 group/inquiry relative overflow-hidden"
@@ -216,7 +213,7 @@ export default function LuxuryNavigation() {
                                     <NavLink
                                       key={nested.name}
                                       to={nested.path}
-                                      onClick={() => setIsMobileMenuOpen(false)}
+                                      onClick={() => { setIsMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
                                       className="block py-3 px-4 text-[10px] sm:text-xs tracking-widest text-white/50 hover:text-[#B88A6A]"
                                     >
                                       {nested.name}
@@ -228,7 +225,7 @@ export default function LuxuryNavigation() {
                           ) : (
                             <NavLink
                               to={sub.path}
-                              onClick={() => setIsMobileMenuOpen(false)}
+                              onClick={() => { setIsMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
                               className="block py-4 px-4 text-xs sm:text-sm tracking-widest text-white/70 hover:text-[#B88A6A]"
                             >
                               {sub.name}
@@ -243,7 +240,7 @@ export default function LuxuryNavigation() {
                 <NavLink
                   key={link.name}
                   to={link.path}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={() => { setIsMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
                   className={({ isActive }) =>
                     `block text-left text-sm sm:text-base tracking-wider transition-all duration-200 py-4 px-4 rounded ${isActive
                       ? 'text-[#B88A6A] bg-[#B88A6A]/10'
@@ -265,7 +262,7 @@ export default function LuxuryNavigation() {
           <div className="flex-grow" />
 
           <a
-            href="https://wa.me/919714107775?text=Hello,%20I%20have%20an%20inquiry%20regarding%20diamonds."
+            href="https://wa.me/919920752390?text=Hello,%20I%20have%20an%20inquiry%20regarding%20diamonds."
             target="_blank"
             rel="noopener noreferrer"
             className="w-full flex items-center justify-center bg-[#B88A6A] hover:bg-[#A67958] text-white px-8 py-4 transition-all duration-200 mt-4 hover:shadow-lg hover:shadow-[#B88A6A]/20 group/inquiry relative overflow-hidden"

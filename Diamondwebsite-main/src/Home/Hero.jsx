@@ -18,8 +18,8 @@ function DiamondScene({ isMobile, isTablet }) {
         
         // Position adjustments: Shift right (x) and downwards (y)
         const time = state.clock.getElapsedTime()
-        diamondRef.current.position.x = isMobile ? 0.15 : 0.5
-        const baseY = isMobile ? -0.1 : -0.2
+        diamondRef.current.position.x = (isMobile ? 0.15 : 0.5) - 0.48
+        const baseY = (isMobile ? -0.1 : -0.2) - 0.15
         diamondRef.current.position.y = baseY + Math.sin(time * 0.5) * 0.05
         
         // Static Z position
@@ -66,18 +66,16 @@ export default function KapuGemsHero() {
 
             {/* Static HTML Overlay */}
             <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-10">
-                {/*<h1 className="text-white text-5xl md:text-8xl font-light tracking-wide opacity-90 mt-[-50vh]">
-                    The Lab Grown
-                </h1> */}
-
-                
-            </div>
+  <h1 className="text-white text-5xl md:text-7xl font-light tracking-wide opacity-70 mt-[-80vh] px-10 py-5" style={{ fontFamily: "'Noto Serif'" }}>
+    Pure Brilliance Modern Origin
+  </h1>
+</div>                
 
             {/* Background */}
             <div
-                className="absolute inset-0 w-full h-full -z-10 bg-cover bg-center bg-no-repeat"
+                className="absolute inset-0 w-full h-full -z-10 bg-cover bg-left bg-no-repeat"
                 style={{
-                    backgroundImage: 'url("/images/process/bgdimondmachine.png")'
+                    backgroundImage: 'url("/images/ChatGPT Image Jun 2, 2026, 12_06_56 AM.png")'
                 }}
             >
                 <div className="absolute inset-0 bg-black/40" />

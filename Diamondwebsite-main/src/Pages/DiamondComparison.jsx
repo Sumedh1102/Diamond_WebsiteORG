@@ -1,8 +1,7 @@
 import React from 'react';
+import heroImage from '../assets/comparison_hero.png';
 
 const DiamondComparison = () => {
-    const heroImage = "https://images.unsplash.com/photo-1615655406736-b37c4fabf923?auto=format&fit=crop&q=80&w=2000";
-
     return (
         <div className="bg-white min-h-screen">
             {/* Hero Section */}

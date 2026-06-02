@@ -19,21 +19,14 @@ const Home = () => {
      
       <Hero />
       <Hero2 />
-
-
       <Shop />
       <div className='bg-[#1A1A1A]'>
         <Quality />
       </div>
-
       <LabGrownProcess />
-
       <Testimonials />
-
       <CSR />
-
       <FAQ />
-
       <Blogs />
     </>
   )

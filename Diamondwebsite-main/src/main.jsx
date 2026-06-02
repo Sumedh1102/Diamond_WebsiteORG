@@ -19,8 +19,11 @@ import FourCs from "./Pages/FourCs.jsx";
 import DiamondComparison from "./Pages/DiamondComparison.jsx";
 import Process from "./Pages/Process.jsx";
 import CalibratedServiceDetails from "./Pages/CalibratedServiceDetails.jsx";
+import MatchingLayouts from "./Pages/MatchingLayouts.jsx";
+import FancyColors from "./Pages/FancyColors.jsx";
 
 import BlogDetail from "./Pages/BlogDetail.jsx";
+import AllDiamonds from "./Pages/AllDiamonds.jsx";
 
 const router = createBrowserRouter([
   {
@@ -68,6 +71,14 @@ const router = createBrowserRouter([
         element: <CalibratedServiceDetails />
       },
       {
+        path: "/matching-layouts",
+        element: <MatchingLayouts />
+      },
+      {
+        path: "/fancy-colors",
+        element: <FancyColors />
+      },
+      {
         path: "/jewellery",
         element: <Jewellery />
       },
@@ -90,6 +101,10 @@ const router = createBrowserRouter([
       {
         path: "/blog/:slug",
         element: <BlogDetail />
+      },
+      {
+        path: "/diamonds",
+        element: <AllDiamonds />
       },
       {
         path: "/Contact",
