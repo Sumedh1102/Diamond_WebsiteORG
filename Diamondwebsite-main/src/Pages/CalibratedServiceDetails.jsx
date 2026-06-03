@@ -118,6 +118,7 @@ const CalibratedServiceDetails = () => {
                     We can create diamonds of any shape in 30 days. Diamond shapes range from rounded to sharp angles. For example, oval cuts are extremely versatile and can fit into jewelry designs of all kinds. Princess cuts are popular with consumers who want a more attractive stone with a better cut.
                   </p>
                 </div>
+                <button onClick={() => navigate('/diamonds')} className="mt-4 px-6 py-2 bg-[#B88A6A] text-white rounded-full hover:bg-[#B88A6A]/80 transition-colors">Explore Shapes</button>
               </div>
 
               {/* 30+ Fancy Colors Card */}
