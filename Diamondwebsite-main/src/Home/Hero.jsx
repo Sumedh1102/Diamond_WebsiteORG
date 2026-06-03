@@ -18,7 +18,7 @@ function DiamondScene({ isMobile, isTablet }) {
         
         // Position adjustments: Shift right (x) and downwards (y)
         const time = state.clock.getElapsedTime()
-        diamondRef.current.position.x = (isMobile ? 0.15 : 0.5) - 0.48
+        diamondRef.current.position.x = (isMobile ? 0.8 : 0.5) - 0.48 - (isMobile ? 0.28 : 0)
         const baseY = (isMobile ? -0.1 : -0.2) - 0.15
         diamondRef.current.position.y = baseY + Math.sin(time * 0.5) * 0.05
         
@@ -66,14 +66,14 @@ export default function KapuGemsHero() {
 
             {/* Static HTML Overlay */}
             <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-10">
-  <h1 className="text-white text-5xl md:text-7xl font-light tracking-wide opacity-70 mt-[-80vh] px-10 py-5" style={{ fontFamily: "'Noto Serif'" }}>
-    Pure Brilliance Modern Origin
-  </h1>
+              <h1 className="text-white text-4xl sm:text-5xl md:text-7xl font-light tracking-wide opacity-70 mt-[-80vh] sm:mt-[-60vh] md:mt-[-80vh] px-10 py-5" style={{ fontFamily: "'Noto Serif'" }}>
+                Pure Brilliance Modern Origin
+              </h1>
 </div>                
 
             {/* Background */}
             <div
-                className="absolute inset-0 w-full h-full -z-10 bg-cover bg-left bg-no-repeat"
+                className="absolute inset-0 w-full h-full -z-10 bg-cover bg-center md:bg-left bg-no-repeat"
                 style={{
                     backgroundImage: 'url("/images/ChatGPT Image Jun 2, 2026, 12_06_56 AM.png")'
                 }}

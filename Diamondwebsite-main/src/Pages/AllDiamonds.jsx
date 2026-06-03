@@ -52,8 +52,8 @@ const AllDiamonds = () => {
               key={cat.key}
               onClick={() => setActiveCategory(cat.key)}
               className={`
-                px-5 py-2 rounded-full text-xs sm:text-sm font-light tracking-wider
-                transition-all duration-500 whitespace-nowrap
+                px-2 py-1 rounded-full text-xs sm:text-sm font-light tracking-wider whitespace-nowrap min-w-max
+                transition-all duration-500
                 ${
                   activeCategory === cat.key
                     ? 'bg-white text-[#1A1A1A] shadow-lg shadow-white/5'
