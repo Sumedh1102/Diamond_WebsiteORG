@@ -1,5 +1,9 @@
 import React, { useRef, useEffect, useState } from 'react';
 import heroImage from '../assets/loose_diamonds_hero.png';
+import mainImage from '../assets/loose_diamonds_main.png';
+import whiteImage from '../assets/loose_diamonds_white.png';
+import shapesImage from '../assets/loose_diamonds_shapes.png';
+import colorsImage from '../assets/loose_diamonds_colors.png';
 
 const diamondCategories = [
     {
@@ -11,7 +15,7 @@ Loose Diamonds come in a wide range of sizes, shapes, colors, and clarities. The
 When purchasing a loose diamond, it's important to consider the Diamond's 4Cs - Cut, Color, Clarity, and Carat weight - which determine its overall quality and value. The cut of the Diamond refers to its proportions and how well it reflects light, while the color refers to the Diamond's hue and saturation. Clarity refers to the presence of inclusions and blemishes in the Diamond, and Carat weight is the measurement of the diamond's size and weight.
 
 Loose Diamonds from DIYORA offers a great deal of flexibility and customization for those looking to purchase a Diamond for an engagement ring, special occasion, or investment.`,
-        image: heroImage,
+        image: mainImage,
     },
         {
         title: 'White',
@@ -19,7 +23,7 @@ Loose Diamonds from DIYORA offers a great deal of flexibility and customization 
         description: `Premium white diamonds known for their brilliance and clarity. These diamonds represent the purest form and are ideal for luxury jewelry pieces.
 
 Color : D to H color IF to SI3 quality Size in carat : 0.003 ct to 0.35 ct Size in mm : 0.8 mm to 4.2 mm`,
-        image: heroImage,
+        image: whiteImage,
     },
     {
         title: '100+ Shapes',
@@ -27,7 +31,7 @@ Color : D to H color IF to SI3 quality Size in carat : 0.003 ct to 0.35 ct Size 
         description: `Yes, you read it right!, Our artistic workshop delivers diamonds with a personal touch that brings undisputed elegance, customization and unsurpassed quality to your jewellery.
 
 Fancy shape Diamonds are any Diamonds that are not round in shape, such as princess, emerald, oval, pear, marquise, heart, and cushion cuts. These shapes are less common than the traditional round brilliant cut and can offer a unique look to a piece of jewelry. The value of a fancy shape diamond is based on the same 4Cs as a round diamond - cut, color, clarity, and carat weight. We can create diamonds of any shape in 30 days. Diamond shapes range from rounded to sharp angles. For example, oval cuts are extremely versatile and can fit into jewelry designs of all kinds. Princess cuts are popular with consumers who want a more attractive stone with a better cut.`,
-        image: heroImage,
+        image: shapesImage,
     },
     {
         title: '30+ Fancy Colors',
@@ -38,7 +42,7 @@ We have a built-in inventory to deliver you your customized color within 30 days
 Chemically pure and structurally perfect Diamonds are colorless. Thankfully nature is not always perfect, and as a result, small traces of impurities or structural discrepancies result in Diamonds that exhibit different colors. If these occur in high enough concentrations, Diamonds exhibit strong and vibrant displays of color, known as fancy color.
 
 Fancy colored Diamonds are exceedingly rare compared to their colorless counterparts. Furthermore, their rarity is enhanced by the intensity of their color, and some fancy color are more rare than others.`,
-        image: heroImage,
+        image: colorsImage,
     },
 ];
 

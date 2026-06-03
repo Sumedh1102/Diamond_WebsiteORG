@@ -1,15 +1,21 @@
-import React from 'react'
-import { Outlet } from 'react-router'
+import React, { useEffect } from 'react'
+import { Outlet, useLocation } from 'react-router-dom'
 import Footer from './Components/Footer'
 import Navbar from './Components/Navbar'
 
 const App = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
-<>
-<Navbar/>
- <Outlet />
- <Footer />
-</>
+    <>
+      <Navbar/>
+      <Outlet />
+      <Footer />
+    </>
   )
 }
 
