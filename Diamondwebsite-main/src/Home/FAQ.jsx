@@ -15,7 +15,7 @@ const faqs = [
     {
         question: "What sizes do you offer?",
         answer:
-            "We offer an extensive range of lab-grown diamonds from 0.01 carats to 35 carats, available in CVD and HPHT varieties. Whether you need melee stones for pavé settings or a statement solitaire, we have you covered.",
+            "We offer an extensive range of lab-grown diamonds from 0.001cts to 35+ Carats, available in CVD and HPHT varieties. Whether you need melee stones for pavé settings or a statement solitaire, we have you covered.",
     },
     {
         question: "What diamond shapes are available?",

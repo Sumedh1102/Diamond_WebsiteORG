@@ -66,7 +66,7 @@ export default function KapuGemsHero() {
 
             {/* Static HTML Overlay */}
             <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-10">
-              <h1 className="text-white text-4xl sm:text-5xl md:text-7xl font-light tracking-wide opacity-70 mt-[-80vh] sm:mt-[-60vh] md:mt-[-80vh] px-10 py-5" style={{ fontFamily: "'Noto Serif'" }}>
+              <h1 className="text-white text-2xl sm:text-4xl md:text-5xl font-light tracking-wide opacity-70 mt-[-80vh] sm:mt-[-60vh] md:mt-[-80vh] px-10 py-5" style={{ fontFamily: "'Noto Serif'" }}>
                 Pure Brilliance Modern Origin
               </h1>
 </div>                

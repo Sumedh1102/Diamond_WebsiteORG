@@ -12,7 +12,7 @@ const DiamondStorytelling = () => {
       label: "SERVICES",
       heading: "Calibrated Parcels",
       description: "Our calibrated diamond parcels offer precision-sized stones measured to exact millimetre tolerances. Perfectly uniform and ready for setting, they are the ideal choice for high-volume jewellery production.",
-      image: "https://i.ibb.co/CKft79CC/Screenshot-2026-05-29-at-11-20-55-AM.png",
+      image: "https://i.ibb.co/whbVzsr4/image.png",
       cta: { label: "Explore Calibrated Parcels", route: "/calibrated-service-details" }
     },
     {
@@ -20,7 +20,7 @@ const DiamondStorytelling = () => {
       label: "MATCHING LAYOUT",
       heading: "Matching Layout",
       description: "Our calibrated matching layouts (10–99 cents, 0.10 MM tolerance) ensure precise uniformity in shape, color, clarity, dimensions, and cent values.",
-      image: "/images/matching_layout.png",
+      image: "https://i.ibb.co/LdYryGdQ/image.png",
       cta: { label: "Explore Matching Layouts", route: "/matching-layouts" }
     },
     {

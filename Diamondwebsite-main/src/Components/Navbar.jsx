@@ -60,7 +60,7 @@ export default function LuxuryNavigation() {
         {/* Brand Logo */}
         <div className="flex items-center flex-shrink-0">
           <NavLink to="/" className="flex items-center">
-            <img src="https://i.ibb.co/XZ0B29FV/NAV.png" alt="NAV Diamonds Logo" className="h-12 sm:h-14 w-auto object-cover bg-black rounded-xl px-5" />
+            <img src="https://i.ibb.co/q3pmNkKq/image.png" alt="NAV Diamonds Logo" className="h-20 sm:h-20 w-auto object-cover" />
           </NavLink>
         </div>
 
