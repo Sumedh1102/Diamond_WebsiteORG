@@ -24,7 +24,7 @@ const BrutingAndFluting = () => {
 
             {/* Introduction Section */}
             <div className="max-w-5xl mx-auto px-6 pt-20 pb-12 text-center">
-                <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-6 uppercase tracking-widest">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-gray-900 mb-6 uppercase tracking-widest">
                     Beyond Requirements. Beyond Expectations. To Precision.
                 </h2>
                 <p className="text-xl italic text-[#B88A6A] font-light mb-10">

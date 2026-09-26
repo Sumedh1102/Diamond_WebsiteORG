@@ -176,7 +176,7 @@ export default function LuxuryNavigation() {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-16 sm:top-20 right-0 w-full sm:w-80 h-[calc(100vh-4rem)] sm:h-[calc(100vh-5rem)] bg-[#1A1A1A] border-t border-[#B88A6A]/30 z-40 lg:hidden transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`fixed top-16 sm:top-20 right-0 w-full sm:w-80 h-[calc(100dvh-4rem)] sm:h-[calc(100dvh-5rem)] bg-[#1A1A1A] border-t border-[#B88A6A]/30 z-40 lg:hidden transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
       >
         <div className="px-6 py-6 space-y-1 h-full flex flex-col overflow-y-auto">

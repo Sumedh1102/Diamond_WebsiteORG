@@ -346,7 +346,7 @@ const MatchingLayouts = () => {
   }, []);
 
   return (
-    <div className="bg-[#1A1A1A] min-h-screen text-white pt-32 pb-24 px-4 sm:px-8 lg:px-16 overflow-x-hidden font-sans">
+    <div className="bg-[#1A1A1A] min-h-screen text-white pt-32 pb-24 px-4 sm:px-8 lg:px-16 overflow-x-hidden font-sans relative">
       
       {/* Background visual blur glows */}
       <div className="absolute top-20 left-10 w-96 h-96 bg-white/[0.02] rounded-full blur-[120px] pointer-events-none" />
