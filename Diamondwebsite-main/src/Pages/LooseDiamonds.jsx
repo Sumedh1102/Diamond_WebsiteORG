@@ -14,7 +14,7 @@ Loose Diamonds come in a wide range of sizes, shapes, colors, and clarities. The
 
 When purchasing a loose diamond, it's important to consider the Diamond's 4Cs - Cut, Color, Clarity, and Carat weight - which determine its overall quality and value. The cut of the Diamond refers to its proportions and how well it reflects light, while the color refers to the Diamond's hue and saturation. Clarity refers to the presence of inclusions and blemishes in the Diamond, and Carat weight is the measurement of the diamond's size and weight.
 
-Loose Diamonds from DIYORA offers a great deal of flexibility and customization for those looking to purchase a Diamond for an engagement ring, special occasion, or investment.`,
+Our Loose Diamonds offer a great deal of flexibility and customization for those looking to purchase a Diamond for an engagement ring, special occasion, or investment.`,
         image: mainImage,
     },
         {
@@ -35,7 +35,7 @@ Fancy shape Diamonds are any Diamonds that are not round in shape, such as princ
     },
     {
         title: '30+ Fancy Colors',
-        description: `With around 40+ years of experience and expertise in creating seamlessly authentic Diamonds, Diyora Diamond has proudly built a successful track record of crafting one-of-a-kind Diamonds in over 30 fancy colors.
+        description: `With around 40+ years of experience and expertise in creating seamlessly authentic Diamonds, we have proudly built a successful track record of crafting one-of-a-kind Diamonds in over 30 fancy colors.
 
 We have a built-in inventory to deliver you your customized color within 30 days, be it any shade or tone.
 

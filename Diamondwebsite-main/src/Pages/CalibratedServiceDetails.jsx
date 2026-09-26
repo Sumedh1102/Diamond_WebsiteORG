@@ -54,7 +54,7 @@ const CalibratedServiceDetails = () => {
                   in the Diamond, and Carat weight is the measurement of the diamond's size and weight.
                 </p>
                 <p>
-                  Loose Diamonds from DIYORA offers a great deal of flexibility and customization for those 
+                  Our Loose Diamonds offer a great deal of flexibility and customization for those
                   looking to purchase a Diamond for an engagement ring, special occasion, or investment.
                 </p>
               </div>
@@ -133,7 +133,7 @@ const CalibratedServiceDetails = () => {
                 </p>
                 <div className="space-y-6 text-base sm:text-lg leading-relaxed text-gray-300 font-light">
                   <p className="text-white font-light text-lg">
-                    With around 40+ years of experience and expertise in creating seamlessly authentic Diamonds, Diyora Diamond has proudly built a successful track record of crafting one-of-a-kind Diamonds in over 30 fancy colors.
+                    With around 40+ years of experience and expertise in creating seamlessly authentic Diamonds, we have proudly built a successful track record of crafting one-of-a-kind Diamonds in over 30 fancy colors.
                   </p>
                   <p>
                     We have a built-in inventory to deliver you your customized color within 30 days, be it any shade or tone.

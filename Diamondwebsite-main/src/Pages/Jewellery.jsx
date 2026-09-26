@@ -7,7 +7,7 @@ const steps = [
     title: 'DESIGNING',
     image: '/JewelleryImage/DESIGNING.png',
     alt: 'Jewellery designing sketch',
-    text: 'Crafting of Diyora jewellery is preceded by meticulous planning and preparation. The inspiration behind our pieces varies, it may be an unusual gemstone, a jewellery competition or a previous, successful design, but they are designed with multidimensional forms and their harmony in mind. We hand sketch the jewellery shape at length, taking functionality, comfort, durability and protection of gemstones and diamonds in mind.',
+    text: 'Crafting of our jewellery is preceded by meticulous planning and preparation. The inspiration behind our pieces varies, it may be an unusual gemstone, a jewellery competition or a previous, successful design, but they are designed with multidimensional forms and their harmony in mind. We hand sketch the jewellery shape at length, taking functionality, comfort, durability and protection of gemstones and diamonds in mind.',
   },
   {
     id: 'cadcam',
