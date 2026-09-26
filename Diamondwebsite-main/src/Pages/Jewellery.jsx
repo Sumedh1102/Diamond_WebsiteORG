@@ -1,32 +1,36 @@
 import React from 'react';
 import heroImage from '../assets/diamond_jewellery_hero.png';
+import designingImg from '../ReplaceImages/desining.png';
+import cadcamImg from '../ReplaceImages/cadcam.png';
+import settingImg from '../ReplaceImages/setting.png';
+import shippingImg from '../ReplaceImages/shipping.png';
 
 const steps = [
   {
     id: 'designing',
     title: 'DESIGNING',
-    image: '/JewelleryImage/DESIGNING.png',
+    image: designingImg,
     alt: 'Jewellery designing sketch',
     text: 'Crafting of our jewellery is preceded by meticulous planning and preparation. The inspiration behind our pieces varies, it may be an unusual gemstone, a jewellery competition or a previous, successful design, but they are designed with multidimensional forms and their harmony in mind. We hand sketch the jewellery shape at length, taking functionality, comfort, durability and protection of gemstones and diamonds in mind.',
   },
   {
     id: 'cadcam',
     title: 'CAD/CAM',
-    image: '/JewelleryImage/cad and cam.png',
+    image: cadcamImg,
     alt: 'CAD CAM jewellery design',
     text: 'When one of the sketches is chosen to be crafted, we use design software to refine our plans. We create three dimensional shapes with the help of the design software which allows us to notice and resolve imperfections. This new technology allows us to examine the jewellery design from all angles so we easily recognise if there is a break in a curve, a crease on a surface or any other problem that needs to be resolved. The crafting of the jewellery item is done completely with a high-precision 3D printer and creating the precious gold metal version of the part is based on that.',
   },
   {
     id: 'setting-polishing',
     title: 'SETTING & POLISHING',
-    image: "/JewelleryImage/Setting and polishing'.png",
+    image: settingImg,
     alt: 'Jewellery setting and polishing',
     text: 'The completed precious metal piece has to undergo a number of short processes. It is at this stage that the carefully selected gemstones, diamonds and/or pearls are set, by an outstandingly gifted and knowledgeable colleague who ensures the settings are both protective and attractive. This is done under a microscope with meticulous precision and at an artistic level. It is at this stage when decorative engraving, enamels, decorative and enhancing treatments are also applied to the piece.',
   },
   {
     id: 'packaging-shipping',
     title: 'Packaging & Shipping',
-    image: '/JewelleryImage/packaging.png',
+    image: shippingImg,
     alt: 'Jewellery packaging and shipping',
     text: 'The ordered jewellery piece is placed in elegant packaging along with necessary documents and then shipped to the respective customers\' address. We believe that a beautiful dainty piece of Jewellery should be packed in durable packaging that is equally beautiful and sturdy.',
   },

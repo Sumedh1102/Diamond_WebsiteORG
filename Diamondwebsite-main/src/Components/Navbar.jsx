@@ -55,12 +55,12 @@ export default function LuxuryNavigation() {
 
   return (
     <div className="w-full bg-black">
-      <nav className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-12 h-16 sm:h-20 flex items-center justify-between">
+      <nav className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-12 h-20 sm:h-24 flex items-center justify-between">
 
         {/* Brand Logo */}
         <div className="flex items-center flex-shrink-0">
           <NavLink to="/" className="flex items-center">
-            <img src="https://i.ibb.co/q3pmNkKq/image.png" alt="NAV Diamonds Logo" className="h-20 sm:h-20 w-auto object-cover" />
+            <img src="https://i.ibb.co/q3pmNkKq/image.png" alt="NAV Diamonds Logo" className="h-36 sm:h-44 w-auto object-cover" />
           </NavLink>
         </div>
 
@@ -176,7 +176,7 @@ export default function LuxuryNavigation() {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-16 sm:top-20 right-0 w-full sm:w-80 h-[calc(100vh-4rem)] sm:h-[calc(100vh-5rem)] bg-[#1A1A1A] border-t border-[#B88A6A]/30 z-40 lg:hidden transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`fixed top-20 sm:top-24 right-0 w-full sm:w-80 h-[calc(100vh-5rem)] sm:h-[calc(100vh-6rem)] bg-[#1A1A1A] border-t border-[#B88A6A]/30 z-40 lg:hidden transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
       >
         <div className="px-6 py-6 space-y-1 h-full flex flex-col overflow-y-auto">

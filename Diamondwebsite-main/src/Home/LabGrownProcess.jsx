@@ -61,6 +61,7 @@ const steps = [
             "The rough diamond is photographed and scanned using advanced imaging technology to map inclusions and plan the optimal cut for maximum yield and brilliance.",
         stat: { label: "Typical Size", value: "1 – 10+ carats" },
         image: "/images/process/rough_extraction.png",
+        imagePosition: "center 20%",
     },
     {
         id: 6,
@@ -380,11 +381,12 @@ export default function LabGrownProcess() {
                     <div className="lg:col-span-7 relative overflow-hidden border-t lg:border-t border-white/10 lg:border-l">
 
                         {/* ─── Hero Image Section ─── */}
-                        <div className="relative w-full h-64 sm:h-72 lg:h-80 overflow-hidden">
+                        <div className="relative w-full h-72 sm:h-80 lg:h-96 overflow-hidden">
                             <img
                                 key={current.id}
                                 src={current.image}
                                 alt={current.title}
+                                style={{ objectPosition: current.imagePosition || "center center" }}
                                 className={`w-full h-full object-cover transition-all duration-700 ease-out ${
                                     isTransitioning ? "opacity-0 scale-105" : "opacity-100 scale-100"
                                 }`}

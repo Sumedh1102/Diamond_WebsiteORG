@@ -3,29 +3,29 @@ import { useNavigate } from "react-router-dom";
 
 // Real diamond photos (tight-cropped copies in public/diamond_images/trimmed)
 const classicShapes = [
-  { name: "Round", image: "/diamond_images/trimmed/round.png" },
-  { name: "Oval", image: "/diamond_images/trimmed/oval.png" },
-  { name: "Cushion", image: "/diamond_images/trimmed/cushion.png" },
-  { name: "Pear", image: "/diamond_images/trimmed/pear.png" },
-  { name: "Princess", image: "/diamond_images/trimmed/princess.png" },
-  { name: "Emerald", image: "/diamond_images/trimmed/emerald.png" },
-  { name: "Marquise", image: "/diamond_images/trimmed/marquise.png" },
-  { name: "Heart", image: "/diamond_images/trimmed/heart.png" },
-  { name: "Asscher", image: "/diamond_images/trimmed/asscher.png" },
-  { name: "Radiant", image: "/diamond_images/trimmed/radiant.png" },
+  { name: "Round", image: "/diamond_images/trimmed/round.webp" },
+  { name: "Oval", image: "/diamond_images/trimmed/oval.webp" },
+  { name: "Cushion", image: "/diamond_images/trimmed/cushion.webp" },
+  { name: "Pear", image: "/diamond_images/trimmed/pear.webp" },
+  { name: "Princess", image: "/diamond_images/trimmed/princess.webp" },
+  { name: "Emerald", image: "/diamond_images/trimmed/emerald.webp" },
+  { name: "Marquise", image: "/diamond_images/trimmed/marquise.webp" },
+  { name: "Heart", image: "/diamond_images/trimmed/heart.webp" },
+  { name: "Asscher", image: "/diamond_images/trimmed/asscher.webp" },
+  { name: "Radiant", image: "/diamond_images/trimmed/radiant.webp" },
 ];
 
 const fancyShapes = [
-  { name: "Customised", image: "/diamond_images/trimmed/butterfly.png" },
-  { name: "Trillion", image: "/diamond_images/trimmed/trillion.png" },
-  { name: "Baguette", image: "/diamond_images/trimmed/baguette.png" },
-  { name: "Hexagon", image: "/diamond_images/trimmed/hexagon.png" },
-  { name: "Kite", image: "/diamond_images/trimmed/kite.png" },
-  { name: "Half Moon", image: "/diamond_images/trimmed/half-moon.png" },
-  { name: "Shield", image: "/diamond_images/trimmed/shield.png" },
-  { name: "Star", image: "/diamond_images/trimmed/star.png" },
-  { name: "Cloud", image: "/diamond_images/trimmed/cloud.png" },
-  { name: "Whale Tail", image: "/diamond_images/trimmed/whale-tail.png" },
+  { name: "Customised", image: "/diamond_images/generated/butterfly.webp" },
+  { name: "Trillion", image: "/diamond_images/generated/trillion.webp" },
+  { name: "Baguette", image: "/diamond_images/generated/baguette.webp" },
+  { name: "Hexagon", image: "/diamond_images/generated/hexagon.webp" },
+  { name: "Kite", image: "/diamond_images/generated/kite.webp" },
+  { name: "Half Moon", image: "/diamond_images/generated/half_moon.webp" },
+  { name: "Shield", image: "/diamond_images/generated/shield.webp" },
+  { name: "Star", image: "/diamond_images/generated/star.webp" },
+  { name: "Cloud", image: "/diamond_images/generated/cloud.webp" },
+  { name: "Whale Tail", image: "/diamond_images/generated/whale_tail.webp" },
 ];
 
 // Fisher-Yates shuffle into a new array
