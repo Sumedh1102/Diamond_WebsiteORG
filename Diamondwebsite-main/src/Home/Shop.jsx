@@ -1,46 +1,60 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
+// Real diamond photos (tight-cropped copies in public/diamond_images/trimmed)
+const classicShapes = [
+  { name: "Round", image: "/diamond_images/trimmed/round.png" },
+  { name: "Oval", image: "/diamond_images/trimmed/oval.png" },
+  { name: "Cushion", image: "/diamond_images/trimmed/cushion.png" },
+  { name: "Pear", image: "/diamond_images/trimmed/pear.png" },
+  { name: "Princess", image: "/diamond_images/trimmed/princess.png" },
+  { name: "Emerald", image: "/diamond_images/trimmed/emerald.png" },
+  { name: "Marquise", image: "/diamond_images/trimmed/marquise.png" },
+  { name: "Heart", image: "/diamond_images/trimmed/heart.png" },
+  { name: "Asscher", image: "/diamond_images/trimmed/asscher.png" },
+  { name: "Radiant", image: "/diamond_images/trimmed/radiant.png" },
+];
+
+const fancyShapes = [
+  { name: "Customised", image: "/diamond_images/trimmed/butterfly.png" },
+  { name: "Trillion", image: "/diamond_images/trimmed/trillion.png" },
+  { name: "Baguette", image: "/diamond_images/trimmed/baguette.png" },
+  { name: "Hexagon", image: "/diamond_images/trimmed/hexagon.png" },
+  { name: "Kite", image: "/diamond_images/trimmed/kite.png" },
+  { name: "Half Moon", image: "/diamond_images/trimmed/half-moon.png" },
+  { name: "Shield", image: "/diamond_images/trimmed/shield.png" },
+  { name: "Star", image: "/diamond_images/trimmed/star.png" },
+  { name: "Cloud", image: "/diamond_images/trimmed/cloud.png" },
+  { name: "Whale Tail", image: "/diamond_images/trimmed/whale-tail.png" },
+];
+
+// Fisher-Yates shuffle into a new array
+const shuffle = (list) => {
+  const result = [...list];
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+};
+
+// Fresh order on every visit. Classic and fancy cuts alternate, so no two
+// classic cuts (e.g. Round and Oval) sit side by side and look alike.
+const shuffleShapes = () => {
+  const classic = shuffle(classicShapes);
+  const fancy = shuffle(fancyShapes);
+  return Array.from({ length: Math.max(classic.length, fancy.length) }, (_, i) => [classic[i], fancy[i]])
+    .flat()
+    .filter(Boolean);
+};
+
 const DiamondShapesSlider = () => {
   const navigate = useNavigate();
   const [isAnimating, setIsAnimating] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const scrollRef = useRef(null);
 
-  const diamonds = [
-    {
-      name: "Customised",
-      image: "https://i.postimg.cc/x8LBHnMG/Chat-GPT-Image-Dec-22-2025-10-16-20-AM-Background-Removed.png",
-    },
-    {
-      name: "Round",
-      image: "https://i.postimg.cc/yN9h7xHh/Chat-GPT-Image-Dec-22-2025-10-03-42-AM-Background-Removed.png",
-    },
-    {
-      name: "Oval",
-      image: "https://i.postimg.cc/N01XWn67/Chat-GPT-Image-Dec-22-2025-10-12-50-AM-Background-Removed.png",
-    },
-    {
-      name: "Cushion",
-      image: "https://i.postimg.cc/c1fzF1ts/Chat-GPT-Image-Dec-22-2025-10-06-45-AM-Background-Removed.png",
-    },
-    {
-      name: "Pear",
-      image: "https://i.postimg.cc/MHzmPSgZ/Chat-GPT-Image-Dec-22-2025-10-09-48-AM-Background-Removed.png",
-    },
-    {
-      name: "Princess",
-      image: "https://i.postimg.cc/P5CzFKVW/Chat-GPT-Image-Dec-22-2025-10-05-22-AM-Background-Removed.png",
-    },
-    {
-      name: "Emerald",
-      image: "https://i.postimg.cc/gjpNCRL6/Chat-GPT-Image-Dec-22-2025-10-08-04-AM-Background-Removed.png",
-    },
-    {
-      name: "Marquise",
-      image: "https://i.postimg.cc/RFdMt1Bj/Chat-GPT-Image-Dec-22-2025-10-14-37-AM-Background-Removed.png",
-    },
-  ];
+  const [diamonds] = useState(shuffleShapes);
 
   // Duplicate for seamless loop
   const duplicatedDiamonds = [...diamonds, ...diamonds, ...diamonds];
@@ -110,9 +124,10 @@ const DiamondShapesSlider = () => {
           <div
             className="flex"
             style={{
+              // 3s per shape, so adding shapes keeps the same scroll speed
               animation:
                 isAnimating && !isPaused
-                  ? "scroll 24s linear infinite"
+                  ? `scroll ${diamonds.length * 3}s linear infinite`
                   : "none",
             }}
           >
