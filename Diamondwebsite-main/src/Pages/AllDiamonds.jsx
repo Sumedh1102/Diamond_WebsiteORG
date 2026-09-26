@@ -44,8 +44,8 @@ const AllDiamonds = () => {
         </div>
       </div>
 
-      {/* Category Navigation Pills */}
-      <div className="sticky top-0 z-20 bg-[#1A1A1A]/85 backdrop-blur-xl border-b border-white/5 py-4">
+      {/* Category Navigation Pills (stick below the fixed navbar: 64px tall once scrolled, 72px from sm) */}
+      <div className="sticky top-16 sm:top-[72px] z-20 bg-[#1A1A1A]/85 backdrop-blur-xl border-b border-white/5 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-center gap-2 sm:gap-4 overflow-x-auto scrollbar-hide">
           {categories.map((cat) => (
             <button

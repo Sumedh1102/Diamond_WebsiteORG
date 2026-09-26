@@ -119,8 +119,8 @@ const DiamondStorytelling = () => {
       {/* Desktop Layout - Side by side with sticky image */}
       <div className="hidden lg:grid grid-cols-2">
 
-        {/* Left Column - Sticky Image Panel */}
-        <div className="relative h-screen sticky top-0">
+        {/* Left Column - Sticky Image Panel (stops below the fixed navbar, which is 72px tall once scrolled) */}
+        <div className="relative sticky top-[72px] h-[calc(100vh-72px)]">
           <div className="absolute inset-0 p-8 xl:p-16">
             <div className="relative w-full h-full">
               {sections.map((section, index) => (

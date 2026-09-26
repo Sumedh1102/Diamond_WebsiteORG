@@ -65,14 +65,14 @@ export default function KapuGemsHero() {
             </Canvas>
 
             {/* Static HTML Overlay */}
-            <div className="absolute inset-0 flex flex-col justify-between items-center pointer-events-none z-10 py-10 sm:py-16 md:py-20 px-6 text-center">
+            <div className="absolute inset-0 flex flex-col justify-between items-center pointer-events-none z-10 py-10 sm:py-16 md:py-20 px-4 sm:px-6 text-center">
               {/* TOP TEXT */}
-              <div className="space-y-2 mt-4 sm:mt-6">
-                {/* extra left padding = the letter-spacing after the last letter, so the text sits centred in the frame */}
-                <p className="inline-block border-2 sm:border-4 border-white py-2 sm:py-3 pl-[calc(1rem+0.2em)] pr-4 sm:pl-[calc(1.5rem+0.4em)] sm:pr-6 text-[#B88A6A] text-sm sm:text-lg md:text-xl lg:text-2xl tracking-[0.2em] sm:tracking-[0.4em] uppercase font-bold drop-shadow-md text-balance">
+              <div className="flex flex-col items-center gap-3 sm:gap-4 mt-2 sm:mt-4">
+                {/* left padding = the letter-spacing after the last letter, so each line sits centred */}
+                <h2 className="pl-[0.08em] text-[clamp(1.5rem,7.5vw,1.875rem)] sm:text-4xl md:text-[2.75rem] xl:text-[3.25rem] 2xl:text-6xl leading-tight tracking-[0.08em] uppercase font-bold text-balance bg-gradient-to-r from-[#C9A27E] via-[#F7E7CE] to-[#C9A27E] bg-clip-text text-transparent drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)]">
                   Manufacturers & Exporters
-                </p>
-                <div className="w-12 sm:w-16 h-[1px] bg-gradient-to-r from-transparent via-[#B88A6A] to-transparent mx-auto opacity-75" />
+                </h2>
+                <div className="w-20 sm:w-28 h-px bg-gradient-to-r from-transparent via-[#E8CFA8] to-transparent opacity-80" />
               </div>
 
               {/* BOTTOM TEXT */}
