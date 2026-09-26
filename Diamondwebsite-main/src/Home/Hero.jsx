@@ -16,10 +16,10 @@ function DiamondScene({ isMobile, isTablet }) {
         // Slow rotation
         diamondRef.current.rotation.y += delta * 0.3
         
-        // Position adjustments: Shift right (x) and downwards (y)
+        // Position adjustments: Shift 1px right (+0.01) and 10px up (+0.10)
         const time = state.clock.getElapsedTime()
-        diamondRef.current.position.x = (isMobile ? 0.8 : 0.5) - 0.48 - (isMobile ? 0.28 : 0)
-        const baseY = (isMobile ? -0.1 : -0.2) - 0.15
+        diamondRef.current.position.x = (isMobile ? 0.8 : 0.5) - 0.55 - (isMobile ? 0.28 : 0)
+        const baseY = (isMobile ? -0.1 : -0.2) + 0.11
         diamondRef.current.position.y = baseY + Math.sin(time * 0.5) * 0.05
         
         // Static Z position
@@ -65,17 +65,34 @@ export default function KapuGemsHero() {
             </Canvas>
 
             {/* Static HTML Overlay */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-10">
-              <h1 className="text-white text-2xl sm:text-4xl md:text-5xl font-light tracking-wide opacity-70 mt-[-80vh] sm:mt-[-60vh] md:mt-[-80vh] px-10 py-5" style={{ fontFamily: "'Noto Serif'" }}>
-                Pure Brilliance Modern Origin
-              </h1>
-</div>                
+            <div className="absolute inset-0 flex flex-col justify-between items-center pointer-events-none z-10 py-10 sm:py-16 md:py-20 px-6 text-center">
+              {/* TOP TEXT */}
+              <div className="space-y-2 mt-4 sm:mt-6">
+                <p className="text-[#B88A6A] text-xs sm:text-sm md:text-base tracking-[0.4em] uppercase font-light drop-shadow-md">
+                  Manufacturers & Exporters
+                </p>
+                <div className="w-12 sm:w-16 h-[1px] bg-gradient-to-r from-transparent via-[#B88A6A] to-transparent mx-auto opacity-75" />
+              </div>
+
+              {/* BOTTOM TEXT */}
+              <div className="space-y-2 sm:space-y-3 max-w-4xl mx-auto mb-4 sm:mb-8">
+                <h1 
+                  className="text-white text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-wider opacity-90 drop-shadow-lg"
+                  style={{ fontFamily: "'Noto Serif', serif" }}
+                >
+                  Pure Brilliance Modern Origin
+                </h1>
+                <p className="text-white/50 text-[10px] sm:text-xs md:text-sm tracking-[0.25em] uppercase font-light">
+                  Precision Lab-Grown Diamond Synthesis
+                </p>
+              </div>
+            </div>                
 
             {/* Background */}
             <div
-                className="absolute inset-0 w-full h-full -z-10 bg-cover bg-center md:bg-left bg-no-repeat"
+                className="absolute inset-0 w-full h-full -z-10 bg-cover bg-center bg-no-repeat"
                 style={{
-                    backgroundImage: 'url("/images/ChatGPT Image Jun 2, 2026, 12_06_56 AM.png")'
+                    backgroundImage: 'url("/images/ChatGPT Image Sep 26, 2026, 08_01_27 PM.png")'
                 }}
             >
                 <div className="absolute inset-0 bg-black/40" />

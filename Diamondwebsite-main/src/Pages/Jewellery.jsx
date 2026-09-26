@@ -40,31 +40,31 @@ const Jewellery = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <div className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <div className="relative h-[40vh] sm:h-[50vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
         <img
           src={heroImage}
           alt="Diamond Jewellery"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/30" />
-        <div className="relative text-center px-6">
-          <h1 className="text-white text-5xl md:text-7xl font-light tracking-widest mb-4 uppercase">
+        <div className="relative text-center px-4 sm:px-6">
+          <h1 className="text-white text-4xl sm:text-5xl md:text-7xl font-light tracking-widest mb-2 sm:mb-4 uppercase">
             Jewellery
           </h1>
-          <p className="text-white text-xl md:text-2xl font-light max-w-2xl mx-auto">
+          <p className="text-white text-base sm:text-xl md:text-2xl font-light max-w-2xl mx-auto">
             Exquisite designs, crafted with sustainable luxury.
           </p>
         </div>
       </div>
 
       {/* Process Sections */}
-      <div className="max-w-6xl mx-auto px-6 py-20 space-y-28">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-16 md:py-20 space-y-12 sm:space-y-20 md:space-y-28">
         {steps.map((step, index) => {
           const isEven = index % 2 === 0;
           return (
             <div
               key={step.id}
-              className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-12 md:gap-20`}
+              className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-8 md:gap-16 lg:gap-20`}
             >
               {/* Image */}
               <div className="w-full md:w-1/2 flex-shrink-0">
@@ -72,7 +72,7 @@ const Jewellery = () => {
                   <img
                     src={step.image}
                     alt={step.alt}
-                    className="w-full h-72 md:h-96 object-cover transition-transform duration-700 hover:scale-105"
+                    className="w-full h-56 sm:h-72 md:h-96 object-cover transition-transform duration-700 hover:scale-105"
                   />
                 </div>
               </div>

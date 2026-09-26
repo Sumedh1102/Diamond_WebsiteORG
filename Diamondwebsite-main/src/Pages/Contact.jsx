@@ -25,34 +25,34 @@ export default function LuxuryContact() {
   return (
 <>
     <Header/>
-    <section className="min-h-fit bg-[#1A1A1A] text-white px-6 py-16 md:px-12 lg:px-40">
+    <section className="min-h-fit bg-[#1A1A1A] text-white px-4 sm:px-6 md:px-12 lg:px-24 xl:px-40 py-12 md:py-16">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
           {/* Left Content Section */}
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             {/* Pill Label */}
             <div className="inline-block">
-              <span className="px-6 py-2 border border-gray-600 rounded-full text-xs uppercase tracking-wider text-gray-300">
+              <span className="px-5 sm:px-6 py-2 border border-gray-600 rounded-full text-xs uppercase tracking-wider text-gray-300">
                 Get in Touch
               </span>
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
               Let's get in touch with us.
             </h1>
 
             {/* Supporting Text */}
-            <p className="text-gray-400 text-lg leading-relaxed max-w-md">
+            <p className="text-gray-400 text-base sm:text-lg leading-relaxed max-w-md">
               If you would like to work with us or just want to get in touch, we'd love to hear from you!
             </p>
 
             {/* Contact Numbers */}
-            <div className="space-y-4 pt-8">
+            <div className="space-y-4 pt-4 sm:pt-8">
               <div>
                 <a 
                   href="tel:+919920752390" 
-                  className="text-3xl md:text-4xl font-semibold text-[#d4a574] hover:text-[#e8bc8a] transition-colors block pb-2 border-b border-[#d4a574]/30"
+                  className="text-xl sm:text-3xl md:text-4xl font-semibold text-[#d4a574] hover:text-[#e8bc8a] transition-colors block pb-2 border-b border-[#d4a574]/30"
                 >
                   +91 99207 52390
                 </a>
@@ -60,7 +60,7 @@ export default function LuxuryContact() {
               <div>
                 <a 
                   href="tel:+919261619050" 
-                  className="text-3xl md:text-4xl font-semibold text-[#d4a574] hover:text-[#e8bc8a] transition-colors block pb-2 border-b border-[#d4a574]/30"
+                  className="text-xl sm:text-3xl md:text-4xl font-semibold text-[#d4a574] hover:text-[#e8bc8a] transition-colors block pb-2 border-b border-[#d4a574]/30"
                 >
                   +91 92616 19050
                 </a>

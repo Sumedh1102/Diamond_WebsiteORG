@@ -80,11 +80,11 @@ const DiamondStorytelling = () => {
             className="mb-8"
           >
             {/* Image */}
-            <div className="h-[60vh] sm:h-[70vh] p-4 sm:p-6">
+            <div className="h-[280px] sm:h-[380px] md:h-[480px] p-3 sm:p-5">
               <img
                 src={section.image}
                 alt={section.heading}
-                className="w-full h-full object-cover rounded-3xl"
+                className="w-full h-full object-cover rounded-2xl sm:rounded-3xl shadow-xl"
               />
             </div>
 
