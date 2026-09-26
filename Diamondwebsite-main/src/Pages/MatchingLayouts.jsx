@@ -2,8 +2,39 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const shapesData = {
+  round: {
+    name: "Round",
+    image: "/diamond_images/trimmed/round.png",
+    tagline: "Timeless brilliant-cut circles with unmatched fire and sparkle",
+    description: "Precisely calibrated round brilliant layouts, matched in diameter, proportions, and light performance for solitaires, eternity bands, and pavé settings.",
+    largeSizes: [
+      { size: "40 pt", dimensions: "4.80" },
+      { size: "45 pt", dimensions: "5.00" },
+      { size: "50 pt", dimensions: "5.20" },
+      { size: "60 pt", dimensions: "5.40" },
+      { size: "70 pt", dimensions: "5.70" },
+      { size: "75 pt", dimensions: "5.80" },
+      { size: "80 pt", dimensions: "6.00" },
+      { size: "90 pt", dimensions: "6.20" },
+      { size: "1.00 ct", dimensions: "6.50" }
+    ],
+    smallSizes: [
+      { size: "5 pt", dimensions: "2.40" },
+      { size: "7 pt", dimensions: "2.70" },
+      { size: "8 pt", dimensions: "2.80" },
+      { size: "10 pt", dimensions: "3.00" },
+      { size: "12 pt", dimensions: "3.20" },
+      { size: "15 pt", dimensions: "3.40" },
+      { size: "18 pt", dimensions: "3.70" },
+      { size: "20 pt", dimensions: "3.80" },
+      { size: "25 pt", dimensions: "4.10" },
+      { size: "30 pt", dimensions: "4.30" },
+      { size: "35 pt", dimensions: "4.50" }
+    ]
+  },
   emerald: {
     name: "Emerald",
+    image: "/diamond_images/trimmed/emerald.png",
     tagline: "Elegant step-cut outlines with clean, sophisticated symmetry",
     description: "Precisely calibrated step-cut layouts engineered for sleek, high-end designs, eternity bands, and multi-stone arrangements.",
     largeSizes: [
@@ -39,6 +70,7 @@ const shapesData = {
   },
   oval: {
     name: "Oval",
+    image: "/diamond_images/trimmed/oval.png",
     tagline: "Elongated brilliance with perfect visual weight distribution",
     description: "Expertly matched oval layout sequences showing seamless fire, depth, and proportion consistency across all sizes.",
     largeSizes: [
@@ -66,6 +98,7 @@ const shapesData = {
   },
   marquise: {
     name: "Marquise",
+    image: "/diamond_images/trimmed/marquise.png",
     tagline: "Striking slender profiles with exceptional fire and sharp points",
     description: "Highly calibrated marquise layouts showing meticulously aligned wing curves and identical length-to-width ratios.",
     largeSizes: [
@@ -99,6 +132,7 @@ const shapesData = {
   },
   pear: {
     name: "Pear",
+    image: "/diamond_images/trimmed/pear.png",
     tagline: "Graceful teardrop elegance offering supreme contour fluidics",
     description: "Flawlessly proportioned pear layouts calibrated to avoid Bow-tie effects, perfectly matching in symmetry and curves.",
     largeSizes: [
@@ -134,6 +168,7 @@ const shapesData = {
   },
   asscher: {
     name: "Asscher",
+    image: "/diamond_images/trimmed/asscher.png",
     tagline: "Vintage step-cut hall-of-mirrors effect with deep visual corridors",
     description: "Highly prized square-cut layouts showcasing beautifully matching concentric patterns and perfectly cropped corners.",
     largeSizes: [
@@ -169,6 +204,7 @@ const shapesData = {
   },
   princess: {
     name: "Princess",
+    image: "/diamond_images/trimmed/princess.png",
     tagline: "Bold square silhouettes with intensely vibrant modern brilliance",
     description: "Perfectly parallel lines and sharp 90-degree corners, precisely matched in fire and light performance for jewelry bands.",
     largeSizes: [
@@ -204,6 +240,7 @@ const shapesData = {
   },
   radiant: {
     name: "Radiant",
+    image: "/diamond_images/trimmed/radiant.png",
     tagline: "Robust cut-corner profiles infused with brilliant faceting",
     description: "An incredible blend of emerald-like contours and round brilliant-style sparkle, precisely calibrated to millimetre accuracy.",
     largeSizes: [
@@ -234,6 +271,7 @@ const shapesData = {
   },
   cushion: {
     name: "Cushion",
+    image: "/diamond_images/trimmed/cushion.png",
     tagline: "Soft pillow-like borders offering highly romantic fire",
     description: "Classic cushion matching layout lines showing smooth pillowy edges and uniform corner curves for delicate jewelry sets.",
     largeSizes: [
@@ -259,6 +297,7 @@ const shapesData = {
   },
   heart: {
     name: "Heart",
+    image: "/diamond_images/trimmed/heart.png",
     tagline: "Unmatched romantic contours with perfect visual balance",
     description: "Incredibly difficult to match, our heart layouts are selected with immaculate lobe curves and cleft depths for custom jewels.",
     largeSizes: [
@@ -286,208 +325,16 @@ const shapesData = {
   }
 };
 
-const renderDiamondShapeSVG = (shape, size = 50, classes = "text-white/80 fill-white/10") => {
-  const commonProps = {
-    width: size,
-    height: size,
-    viewBox: "0 0 100 100",
-    className: `${classes} transition-all duration-300 drop-shadow-[0_0_8px_rgba(255,255,255,0.25)]`,
-    stroke: "currentColor",
-    strokeWidth: "1.2",
-    strokeLinecap: "round",
-    strokeLinejoin: "round"
-  };
-
-  switch (shape) {
-    case 'emerald':
-      return (
-        <svg {...commonProps}>
-          {/* Outer Border */}
-          <polygon points="25,15 75,15 88,28 88,72 75,85 25,85 12,72 12,28" />
-          {/* First inner step */}
-          <polygon points="30,22 70,22 80,32 80,68 70,78 30,78 20,68 20,32" />
-          {/* Second inner step */}
-          <polygon points="35,30 65,30 73,38 73,62 65,70 35,70 27,62 27,38" />
-          {/* Center Table */}
-          <polygon points="40,38 60,38 65,43 65,57 60,62 40,62 35,57 35,43" />
-          {/* Corner lines */}
-          <line x1="25" y1="15" x2="40" y2="38" />
-          <line x1="75" y1="15" x2="60" y2="38" />
-          <line x1="88" y1="28" x2="65" y2="43" />
-          <line x1="88" y1="72" x2="65" y2="57" />
-          <line x1="75" y1="85" x2="60" y2="62" />
-          <line x1="25" y1="85" x2="40" y2="62" />
-          <line x1="12" y1="72" x2="35" y2="57" />
-          <line x1="12" y1="28" x2="35" y2="43" />
-        </svg>
-      );
-    case 'oval':
-      return (
-        <svg {...commonProps}>
-          {/* Outer Oval */}
-          <ellipse cx="50" cy="50" rx="42" ry="32" />
-          {/* Center Table */}
-          <ellipse cx="50" cy="50" rx="20" ry="14" />
-          {/* Star and kite facets lines */}
-          <path d="M 50,18 C 30,18 20,30 20,50 C 20,70 30,82 50,82 C 70,82 80,70 80,50 C 80,30 70,18 50,18 Z" strokeDasharray="200" strokeDashoffset="0" fill="none" opacity="0.3" />
-          {/* Facets Radiating from Table */}
-          <line x1="50" y1="18" x2="50" y2="36" />
-          <line x1="50" y1="82" x2="50" y2="64" />
-          <line x1="8" y1="50" x2="30" y2="50" />
-          <line x1="92" y1="50" x2="70" y2="50" />
-          <line x1="20" y1="27" x2="36" y2="39" />
-          <line x1="80" y1="27" x2="64" y2="39" />
-          <line x1="20" y1="73" x2="36" y2="61" />
-          <line x1="80" y1="73" x2="64" y2="61" />
-        </svg>
-      );
-    case 'marquise':
-      return (
-        <svg {...commonProps}>
-          {/* Marquise Outer Curve */}
-          <path d="M 12,50 Q 50,14 88,50 Q 50,86 12,50 Z" />
-          {/* Inner Table */}
-          <path d="M 32,50 Q 50,32 68,50 Q 50,68 32,50 Z" />
-          {/* Facet lines */}
-          <line x1="12" y1="50" x2="32" y2="50" />
-          <line x1="88" y1="50" x2="68" y2="50" />
-          <line x1="50" y1="14" x2="50" y2="32" />
-          <line x1="50" y1="86" x2="50" y2="68" />
-          {/* Diagonal facets */}
-          <line x1="28" y1="30" x2="41" y2="41" />
-          <line x1="72" y1="30" x2="59" y2="41" />
-          <line x1="28" y1="70" x2="41" y2="59" />
-          <line x1="72" y1="70" x2="59" y2="59" />
-        </svg>
-      );
-    case 'pear':
-      return (
-        <svg {...commonProps}>
-          {/* Pear teardrop contour */}
-          <path d="M 50,14 C 28,45 12,68 12,78 C 12,88 28,90 50,90 C 72,90 88,88 88,78 C 88,68 72,45 50,14 Z" />
-          {/* Center Table */}
-          <path d="M 50,38 C 38,55 28,68 28,74 C 28,80 38,81 50,81 C 62,81 72,80 72,74 C 72,68 62,55 50,38 Z" />
-          {/* Rib facets */}
-          <line x1="50" y1="14" x2="50" y2="38" />
-          <line x1="12" y1="78" x2="28" y2="74" />
-          <line x1="88" y1="78" x2="72" y2="74" />
-          <line x1="50" y1="90" x2="50" y2="81" />
-          <line x1="24" y1="50" x2="36" y2="52" />
-          <line x1="76" y1="50" x2="64" y2="52" />
-          <line x1="26" y1="86" x2="36" y2="78" />
-          <line x1="74" y1="86" x2="64" y2="78" />
-        </svg>
-      );
-    case 'asscher':
-      return (
-        <svg {...commonProps}>
-          {/* Square outer cropped shape */}
-          <polygon points="25,15 75,15 85,25 85,75 75,85 25,85 15,75 15,25" />
-          {/* Concentric Step 1 */}
-          <polygon points="32,23 68,23 77,32 77,68 68,77 32,77 23,68 23,32" />
-          {/* Concentric Step 2 */}
-          <polygon points="40,32 60,32 68,40 68,60 60,68 40,68 32,60 32,40" />
-          {/* Table */}
-          <polygon points="45,39 55,39 61,45 61,55 55,61 45,61 39,55 39,45" />
-          {/* Diagonal lines through corners */}
-          <line x1="15" y1="25" x2="39" y2="45" />
-          <line x1="75" y1="15" x2="55" y2="39" />
-          <line x1="85" y1="25" x2="61" y2="45" />
-          <line x1="85" y1="75" x2="61" y2="55" />
-          <line x1="75" y1="85" x2="55" y2="61" />
-          <line x1="25" y1="85" x2="45" y2="61" />
-          <line x1="15" y1="75" x2="39" y2="55" />
-          <line x1="25" y1="15" x2="45" y2="39" />
-        </svg>
-      );
-    case 'princess':
-      return (
-        <svg {...commonProps}>
-          {/* Perfect Square outer */}
-          <rect x="15" y="15" width="70" height="70" />
-          {/* Center Table Square */}
-          <rect x="35" y="35" width="30" height="30" />
-          {/* Star facets (diagonals & crosslines) */}
-          <line x1="15" y1="15" x2="35" y2="35" />
-          <line x1="85" y1="15" x2="65" y2="35" />
-          <line x1="15" y1="85" x2="35" y2="65" />
-          <line x1="85" y1="85" x2="65" y2="65" />
-          {/* Orthogonal splitting facets */}
-          <line x1="50" y1="15" x2="50" y2="35" />
-          <line x1="50" y1="85" x2="50" y2="65" />
-          <line x1="15" y1="50" x2="35" y2="50" />
-          <line x1="85" y1="50" x2="65" y2="50" />
-          {/* Inner brilliant stars */}
-          <line x1="35" y1="35" x2="50" y2="50" />
-          <line x1="65" y1="35" x2="50" y2="50" />
-          <line x1="35" y1="65" x2="50" y2="50" />
-          <line x1="65" y1="65" x2="50" y2="50" />
-        </svg>
-      );
-    case 'radiant':
-      return (
-        <svg {...commonProps}>
-          {/* Rectangular outer with cropped corners */}
-          <polygon points="25,18 75,18 85,28 85,72 75,82 25,82 15,72 15,28" />
-          {/* Table */}
-          <polygon points="38,34 62,34 68,40 68,60 62,66 38,66 32,60 32,40" />
-          {/* Brilliant faceting lines radiating */}
-          <line x1="15" y1="28" x2="32" y2="40" />
-          <line x1="25" y1="18" x2="38" y2="34" />
-          <line x1="75" y1="18" x2="62" y2="34" />
-          <line x1="85" y1="28" x2="68" y2="40" />
-          <line x1="85" y1="72" x2="68" y2="60" />
-          <line x1="75" y1="82" x2="62" y2="66" />
-          <line x1="25" y1="82" x2="38" y2="66" />
-          <line x1="15" y1="72" x2="32" y2="60" />
-          {/* Side splits */}
-          <line x1="50" y1="18" x2="50" y2="34" />
-          <line x1="50" y1="82" x2="50" y2="66" />
-          <line x1="15" y1="50" x2="32" y2="50" />
-          <line x1="85" y1="50" x2="68" y2="50" />
-        </svg>
-      );
-    case 'cushion':
-      return (
-        <svg {...commonProps}>
-          {/* Rounded Cushion Outline */}
-          <path d="M 28,15 C 50,12 50,12 72,15 C 85,18 88,28 85,50 C 88,72 85,82 72,85 C 50,88 50,88 28,85 C 15,82 12,72 15,50 C 12,28 15,18 28,15 Z" />
-          {/* Table */}
-          <path d="M 38,32 C 50,30 50,30 62,32 C 68,34 70,38 68,50 C 70,62 68,66 62,68 C 50,70 50,70 38,68 C 32,66 30,62 32,50 C 30,38 32,34 38,32 Z" />
-          {/* Facets radiating from rounded table */}
-          <line x1="20" y1="20" x2="33" y2="33" />
-          <line x1="80" y1="20" x2="67" y2="33" />
-          <line x1="20" y1="80" x2="33" y2="67" />
-          <line x1="80" y1="80" x2="67" y2="67" />
-          <line x1="50" y1="13" x2="50" y2="30" />
-          <line x1="50" y1="87" x2="50" y2="70" />
-          <line x1="13" y1="50" x2="30" y2="50" />
-          <line x1="87" y1="50" x2="70" y2="50" />
-        </svg>
-      );
-    case 'heart':
-      return (
-        <svg {...commonProps}>
-          {/* Heart Outline */}
-          <path d="M 50,32 C 50,15 20,10 20,38 C 20,62 50,85 50,85 C 50,85 80,62 80,38 C 80,10 50,15 50,32 Z" />
-          {/* Table */}
-          <path d="M 50,47 C 50,35 32,32 32,50 C 32,64 50,76 50,76 C 50,76 68,64 68,50 C 68,32 50,35 50,47 Z" />
-          {/* Facet lines */}
-          <line x1="50" y1="32" x2="50" y2="47" />
-          <line x1="50" y1="85" x2="50" y2="76" />
-          <line x1="20" y1="38" x2="32" y2="50" />
-          <line x1="80" y1="38" x2="68" y2="50" />
-          {/* Lobe facets */}
-          <line x1="33" y1="18" x2="40" y2="39" />
-          <line x1="67" y1="18" x2="60" y2="39" />
-          <line x1="25" y1="62" x2="36" y2="63" />
-          <line x1="75" y1="62" x2="64" y2="63" />
-        </svg>
-      );
-    default:
-      return null;
-  }
-};
+// `size` is the stone's height in px; width follows the stone's natural proportions
+const renderDiamondShape = (shape, size = 50, classes = "") => (
+  <img
+    src={shapesData[shape].image}
+    alt={`${shapesData[shape].name} diamond`}
+    draggable={false}
+    style={{ height: size }}
+    className={`w-auto max-w-none select-none transition-all duration-300 ${classes}`}
+  />
+);
 
 const MatchingLayouts = () => {
   const navigate = useNavigate();
@@ -533,7 +380,7 @@ const MatchingLayouts = () => {
           <p className="text-gray-500 text-xs tracking-[0.2em] uppercase mb-6 font-semibold">
             Select Diamond Shape Layout
           </p>
-          <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-9 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-5 xl:grid-cols-10 gap-3">
             {Object.keys(shapesData).map((shapeKey) => {
               const isActive = selectedShape === shapeKey;
               return (
@@ -547,10 +394,10 @@ const MatchingLayouts = () => {
                   }`}
                 >
                   <div className="mb-3 transition-transform duration-500 group-hover:scale-110">
-                    {renderDiamondShapeSVG(
-                      shapeKey, 
-                      42, 
-                      isActive ? "text-[#B88A6A] fill-[#B88A6A]/10" : "text-white/40 fill-transparent group-hover:text-white/70"
+                    {renderDiamondShape(
+                      shapeKey,
+                      42,
+                      isActive ? "drop-shadow-[0_0_10px_rgba(184,138,106,0.7)]" : "opacity-50 group-hover:opacity-100"
                     )}
                   </div>
                   <span className={`text-[11px] uppercase tracking-wider font-light transition-colors duration-300 ${
@@ -597,7 +444,7 @@ const MatchingLayouts = () => {
             <div className="absolute w-72 h-72 rounded-full bg-white/[0.02] border border-white/[0.04] animate-pulse pointer-events-none" />
             <div className="relative group cursor-pointer hover:scale-105 transition-all duration-700">
               <div className="absolute inset-0 bg-[#B88A6A]/10 blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              {renderDiamondShapeSVG(selectedShape, 180, "text-white/80 fill-white/[0.02] filter drop-shadow-[0_0_25px_rgba(255,255,255,0.2)]")}
+              {renderDiamondShape(selectedShape, 180, "drop-shadow-[0_0_25px_rgba(255,255,255,0.2)]")}
             </div>
           </div>
 
@@ -641,13 +488,13 @@ const MatchingLayouts = () => {
               </div>
               
               {/* Row 1 visual representation (tapered stones layout) */}
-              <div className="flex justify-center items-center py-10 px-4 bg-black/30 border border-white/5 rounded-2xl gap-2 overflow-x-auto min-h-[140px]">
+              <div className="flex justify-center [justify-content:safe_center] items-center py-10 px-4 bg-black/30 border border-white/5 rounded-2xl gap-2 overflow-x-auto min-h-[140px]">
                 {[32, 44, 56, 72, 56, 44, 32].map((sizePercent, idx) => (
                   <div 
                     key={idx} 
                     className="flex flex-col items-center transition-all duration-500 hover:scale-110 cursor-pointer group/stone"
                   >
-                    {renderDiamondShapeSVG(selectedShape, sizePercent, "text-white/60 fill-white/[0.03] hover:text-[#B88A6A] hover:drop-shadow-[0_0_12px_rgba(184,138,106,0.5)]")}
+                    {renderDiamondShape(selectedShape, sizePercent, "drop-shadow-[0_0_8px_rgba(255,255,255,0.25)] hover:drop-shadow-[0_0_12px_rgba(184,138,106,0.5)]")}
                     <span className="text-[9px] text-gray-500 font-light mt-2 opacity-0 group-hover/stone:opacity-100 transition-opacity duration-300">
                       {sizePercent === 72 ? "Center" : sizePercent === 56 ? "Side A" : sizePercent === 44 ? "Side B" : "Side C"}
                     </span>
@@ -678,13 +525,13 @@ const MatchingLayouts = () => {
               </div>
 
               {/* Row 2 visual representation (Identical eternity layout) */}
-              <div className="flex justify-center items-center py-10 px-4 bg-black/30 border border-white/5 rounded-2xl gap-3 overflow-x-auto min-h-[140px]">
+              <div className="flex justify-center [justify-content:safe_center] items-center py-10 px-4 bg-black/30 border border-white/5 rounded-2xl gap-3 overflow-x-auto min-h-[140px]">
                 {[50, 50, 50, 50, 50, 50, 50, 50, 50].map((sizePercent, idx) => (
                   <div 
                     key={idx} 
                     className="flex flex-col items-center transition-all duration-500 hover:scale-115 cursor-pointer"
                   >
-                    {renderDiamondShapeSVG(selectedShape, sizePercent, "text-white/60 fill-white/[0.03] hover:text-[#B88A6A] hover:drop-shadow-[0_0_12px_rgba(184,138,106,0.5)]")}
+                    {renderDiamondShape(selectedShape, sizePercent, "drop-shadow-[0_0_8px_rgba(255,255,255,0.25)] hover:drop-shadow-[0_0_12px_rgba(184,138,106,0.5)]")}
                     <span className="text-[8px] text-gray-500 font-light mt-2 select-none">
                       {idx + 1}
                     </span>
@@ -715,13 +562,13 @@ const MatchingLayouts = () => {
               </div>
 
               {/* Row 3 visual representation (Trilogy layout) */}
-              <div className="flex justify-center items-center py-10 px-4 bg-black/30 border border-white/5 rounded-2xl gap-8 overflow-x-auto min-h-[140px]">
+              <div className="flex justify-center [justify-content:safe_center] items-center py-10 px-4 bg-black/30 border border-white/5 rounded-2xl gap-8 overflow-x-auto min-h-[140px]">
                 {[45, 80, 45].map((sizePercent, idx) => (
                   <div 
                     key={idx} 
                     className="flex flex-col items-center transition-all duration-500 hover:scale-110 cursor-pointer group/stone"
                   >
-                    {renderDiamondShapeSVG(selectedShape, sizePercent, "text-white/60 fill-white/[0.03] hover:text-[#B88A6A] hover:drop-shadow-[0_0_16px_rgba(184,138,106,0.6)]")}
+                    {renderDiamondShape(selectedShape, sizePercent, "drop-shadow-[0_0_8px_rgba(255,255,255,0.25)] hover:drop-shadow-[0_0_16px_rgba(184,138,106,0.6)]")}
                     <span className="text-[10px] text-gray-500 font-light mt-2 uppercase tracking-widest group-hover/stone:text-[#B88A6A] transition-colors">
                       {idx === 1 ? "Main Stone" : "Side Accent"}
                     </span>
