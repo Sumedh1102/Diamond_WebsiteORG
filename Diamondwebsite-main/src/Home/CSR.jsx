@@ -39,7 +39,7 @@ export default function CSR() {
                         <p className="text-[#B88A6A] text-xs sm:text-sm tracking-[0.3em] uppercase mb-4 font-light">
                             Our Responsibility
                         </p>
-                        <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-tight">
+                        <h2 className="text-white text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-light leading-tight">
                             Corporate Social
                             <br />
                             <span className="font-semibold">Responsibility</span>

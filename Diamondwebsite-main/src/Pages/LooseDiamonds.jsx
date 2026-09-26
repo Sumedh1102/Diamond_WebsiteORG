@@ -175,7 +175,7 @@ const LooseDiamonds = () => {
                                         <p className="text-[#B88A6A] text-xs tracking-[0.3em] uppercase mb-6 font-light">
                                             Diamond Category
                                         </p>
-                                        <h2 className="text-white text-4xl sm:text-5xl lg:text-6xl font-light mb-6 leading-tight">
+                                        <h2 className="text-white text-4xl sm:text-5xl xl:text-6xl font-light mb-6 leading-tight">
                                             {category.title}
                                         </h2>
                                         {category.tagline && (

@@ -68,7 +68,7 @@ export default function LuxuryContact() {
             </div>
 
             {/* Social Links */}
-            <div className="flex gap-8 pt-8">
+            <div className="flex flex-wrap gap-x-8 gap-y-3 pt-8">
               <a 
                 href="#" 
                 className="text-gray-300 hover:text-white transition-colors text-lg"

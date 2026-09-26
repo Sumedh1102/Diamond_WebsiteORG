@@ -72,7 +72,7 @@ const DiamondStorytelling = () => {
     <div className="bg-[#1A1A1A] min-h-fit">
 
       {/* Mobile Layout - Stacked image then content */}
-      <div className="lg:hidden">
+      <div className="flow-root lg:hidden">
         {sections.map((section, index) => (
           <div
             key={section.id}

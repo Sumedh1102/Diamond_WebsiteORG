@@ -43,7 +43,7 @@ export default function FAQ() {
                         <p className="text-[#B88A6A] text-xs sm:text-sm tracking-[0.3em] uppercase mb-4 font-light">
                             FAQ
                         </p>
-                        <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-light leading-tight mb-6">
+                        <h2 className="text-white text-3xl sm:text-4xl lg:text-4xl xl:text-5xl font-light leading-tight mb-6">
                             Frequently Asked
                             <br />
                             <span className="font-semibold">Questions</span>

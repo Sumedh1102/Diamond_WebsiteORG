@@ -60,7 +60,7 @@ export default function LuxuryNavigation() {
         {/* Brand Logo */}
         <div className="flex items-center flex-shrink-0">
           <NavLink to="/" className="flex items-center">
-            <img src="https://i.ibb.co/q3pmNkKq/image.png" alt="NAV Diamonds Logo" className="h-36 sm:h-44 w-auto object-cover" />
+            <img src="https://i.ibb.co/q3pmNkKq/image.png" alt="NAV Diamonds Logo" className="h-36 sm:h-44 w-auto max-w-[calc(100vw-6rem)] lg:max-w-[14rem] xl:max-w-none object-contain" />
           </NavLink>
         </div>
 
@@ -176,7 +176,7 @@ export default function LuxuryNavigation() {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-20 sm:top-24 right-0 w-full sm:w-80 h-[calc(100vh-5rem)] sm:h-[calc(100vh-6rem)] bg-[#1A1A1A] border-t border-[#B88A6A]/30 z-40 lg:hidden transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`fixed top-20 sm:top-24 right-0 w-full sm:w-80 h-[calc(100dvh-5rem)] sm:h-[calc(100dvh-6rem)] bg-[#1A1A1A] border-t border-[#B88A6A]/30 z-40 lg:hidden transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
       >
         <div className="px-6 py-6 space-y-1 h-full flex flex-col overflow-y-auto">

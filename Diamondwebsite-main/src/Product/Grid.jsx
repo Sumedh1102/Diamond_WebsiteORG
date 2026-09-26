@@ -45,7 +45,7 @@ export default function DiamondComparison() {
             {/* Content */}
             <div className="relative z-10">
               <div className="flex items-center gap-3 mb-12">
-                <h2 className="text-4xl md:text-5xl font-bold text-[#d4a574]">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#d4a574]">
                   HPHT Diamonds
                 </h2>
                 <div className="w-2 h-2 rounded-full bg-[#d4a574] mt-2"></div>
@@ -81,7 +81,7 @@ export default function DiamondComparison() {
 
             {/* Content */}
             <div className="relative z-10">
-              <h2 className="text-4xl md:text-5xl font-bold text-[#d4a574] mb-12">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#d4a574] mb-12">
                 CVD Diamonds
               </h2>
 

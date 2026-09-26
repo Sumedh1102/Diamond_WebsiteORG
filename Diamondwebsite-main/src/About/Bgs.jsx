@@ -121,14 +121,14 @@ export default function WhyChooseUs() {
             <img
               src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1974&auto=format&fit=crop"
               alt="Diamond Collection"
-              className="w-full h-[400px] sm:h-[450px] lg:h-[500px] object-cover brightness-[0.35] group-hover:scale-105 transition-transform duration-1000"
+              className="absolute inset-0 w-full h-full object-cover brightness-[0.35] group-hover:scale-105 transition-transform duration-1000"
             />
 
             {/* Gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60" />
 
             {/* Content */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+            <div className="relative min-h-[400px] sm:min-h-[450px] lg:min-h-[500px] flex flex-col items-center justify-center text-center px-6 py-12">
               <p className="text-[#B88A6A] text-xs sm:text-sm tracking-[0.3em] uppercase mb-6 font-light">
                 Start Your Journey
               </p>
