@@ -68,18 +68,15 @@ export default function KapuGemsHero() {
             <div className="absolute inset-0 flex flex-col justify-between items-center pointer-events-none z-10 py-10 sm:py-16 md:py-20 px-6 text-center">
               {/* TOP TEXT */}
               <div className="space-y-2 mt-4 sm:mt-6">
-                <p className="text-[#B88A6A] text-xs sm:text-sm md:text-base tracking-[0.4em] uppercase font-light drop-shadow-md">
+                <p className="text-[#B88A6A] text-sm sm:text-lg md:text-xl lg:text-2xl tracking-[0.2em] sm:tracking-[0.4em] uppercase font-bold drop-shadow-md text-balance">
                   Manufacturers & Exporters
                 </p>
                 <div className="w-12 sm:w-16 h-[1px] bg-gradient-to-r from-transparent via-[#B88A6A] to-transparent mx-auto opacity-75" />
               </div>
 
               {/* BOTTOM TEXT */}
-              <div className="space-y-2 sm:space-y-3 max-w-4xl mx-auto mb-4 sm:mb-8">
-                <h1 
-                  className="text-white text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-wider opacity-90 drop-shadow-lg"
-                  style={{ fontFamily: "'Noto Serif', serif" }}
-                >
+              <div className="space-y-2 sm:space-y-3 max-w-5xl mx-auto mb-4 sm:mb-8">
+                <h1 className="text-white text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-wider opacity-90 drop-shadow-lg text-balance">
                   Pure Brilliance Modern Origin
                 </h1>
                 <p className="text-white/50 text-[10px] sm:text-xs md:text-sm tracking-[0.25em] uppercase font-light">
