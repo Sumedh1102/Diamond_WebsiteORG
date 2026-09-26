@@ -8,6 +8,7 @@ const colorsData = [
     color: "Pink",
     geology: "Rare and romantic, formed by plastic deformation",
     description: "Less than 0.01% of all gem-quality diamonds are fancy pink, which makes them highly coveted. The hue is created by intense heat and pressure deep within the Earth causing the diamond's crystal lattice to deform, absorbing green light and reflecting a beautiful range of romantic pinks.",
+    image: "/diamond_colors/pink.png",
     styles: {
       "--color-primary": "#FF8DA1",
       "--color-secondary": "#FF4B72",
@@ -25,6 +26,7 @@ const colorsData = [
     color: "Blue",
     geology: "Caused by boron impurities, extremely valuable",
     description: "Extremely rare and prestigious. The exquisite blue hue is caused by tiny amounts of boron trapped in the carbon structure during formation, absorbing red, yellow, and green light while refracting deep ocean blues and sky reflections.",
+    image: "/diamond_colors/blue.png",
     styles: {
       "--color-primary": "#7DD3FC",
       "--color-secondary": "#2563EB",
@@ -42,6 +44,7 @@ const colorsData = [
     color: "Yellow",
     geology: "Most common fancy color, caused by nitrogen",
     description: "Also known as Canary diamonds. Their bright, cheerful tone is caused by nitrogen atoms substituting for carbon in the crystal structure, absorbing blue light and yielding a magnificent, sunny spectrum of fancy colors.",
+    image: "/diamond_colors/yellow.png",
     styles: {
       "--color-primary": "#FDE047",
       "--color-secondary": "#EAB308",
@@ -59,6 +62,7 @@ const colorsData = [
     color: "Green",
     geology: "Natural radiation exposure creates this color",
     description: "Formed when diamonds are exposed to natural alpha, beta, or gamma radiation from radioactive rocks near the Earth's surface during the final stages of geological cooling. This knocks carbon atoms out of place, creating a gorgeous green hue.",
+    image: "/diamond_colors/green.png",
     styles: {
       "--color-primary": "#6EE7B7",
       "--color-secondary": "#10B981",
@@ -76,6 +80,7 @@ const colorsData = [
     color: "Orange",
     geology: "Combination of nitrogen and structural defects",
     description: "Pure orange diamonds, sometimes called fire diamonds, are exceptionally rare. Their warm, intense color is a fascinating blend of nitrogen impurities coupled with specific lattice distortions formed during deep crust crystallization.",
+    image: "/diamond_colors/orange.png",
     styles: {
       "--color-primary": "#FDBA74",
       "--color-secondary": "#F97316",
@@ -93,6 +98,7 @@ const colorsData = [
     color: "Red",
     geology: "Rarest of all diamond colors",
     description: "The absolute pinnacle of gemological rarity. Only a handful of pure red diamonds exist in the world. Like pinks, they are created by severe lattice deforming under extreme tectonic pressure, resulting in an incredibly intense and vibrant crimson glow.",
+    image: "/diamond_colors/red.png",
     styles: {
       "--color-primary": "#FCA5A5",
       "--color-secondary": "#EF4444",
@@ -110,6 +116,7 @@ const colorsData = [
     color: "Purple",
     geology: "Caused by hydrogen and boron impurities",
     description: "Rare and mysterious, these diamonds draw their sophisticated violet-to-orchid hues from an intersection of high hydrogen concentrations alongside traces of boron and lattice anomalies inside the crystalline matrix.",
+    image: "/diamond_colors/purple.png",
     styles: {
       "--color-primary": "#D8B4FE",
       "--color-secondary": "#A855F7",
@@ -127,6 +134,7 @@ const colorsData = [
     color: "Brown",
     geology: "Also known as champagne or cognac diamonds",
     description: "Known in modern fine jewelry as Champagne, Cognac, or Chocolate diamonds. They exhibit rich, earthy, luxurious metallic colors created by internal graining caused by plastic deformation of the carbon lattice.",
+    image: "/diamond_colors/brown.png",
     styles: {
       "--color-primary": "#DBC1AC",
       "--color-secondary": "#967B56",
@@ -144,6 +152,7 @@ const colorsData = [
     color: "Black",
     geology: "Opaque diamonds with graphite inclusions",
     description: "Unlike other colored diamonds, Carbonado or black diamonds are fully opaque. They owe their intense, midnight obsidian-like surface color to millions of dark micro-inclusions of graphite, hematite, and amorphous carbon.",
+    image: "/diamond_colors/black.png",
     styles: {
       "--color-primary": "#9CA3AF",
       "--color-secondary": "#374151",
@@ -161,6 +170,7 @@ const colorsData = [
     color: "Gray",
     geology: "Subtle and sophisticated neutral tone",
     description: "Exhibiting an elegant, silver-to-charcoal metallic color tone. These subtle and highly modern gems owe their cool neutral hues to either boron impurities or a dense concentration of hydrogen anomalies within the diamond structure.",
+    image: "/diamond_colors/gray.png",
     styles: {
       "--color-primary": "#CBD5E1",
       "--color-secondary": "#64748B",
@@ -178,6 +188,7 @@ const colorsData = [
     color: "Violet",
     geology: "Rare purple-blue combination",
     description: "A breathtaking combination of serene blue and majestic purple. True violet diamonds are exceptionally rare in nature, getting their distinctive spiritual hues from complex hydrogen-nitrogen lattice structures.",
+    image: "/diamond_colors/violet.png",
     styles: {
       "--color-primary": "#C7D2FE",
       "--color-secondary": "#6366F1",
@@ -195,6 +206,7 @@ const colorsData = [
     color: "White",
     geology: "Colorless diamonds with exceptional purity",
     description: "The classic, pristine standard. Chemically pure and structurally perfect, true colorless D-Flawless white diamonds are highly refractive crystals that act as perfect prisms, splitting ambient light into all colors of the rainbow.",
+    image: "/diamond_colors/white.png",
     styles: {
       "--color-primary": "#FFFFFF",
       "--color-secondary": "#E2E8F0",
@@ -212,6 +224,7 @@ const colorsData = [
     color: "Olive",
     geology: "Unique olive-green hue, highly prized",
     description: "A rare and sophisticated olive-green hue, highly prized by collectors for its natural distinction. These exquisite gems showcase a subtle and complex combination of yellow-green and golden-brown tones, resulting from specific nitrogen configurations inside the carbon lattice.",
+    image: "/diamond_colors/olive.png",
     styles: {
       "--color-primary": "#D9F99D",
       "--color-secondary": "#A3E635",
@@ -225,65 +238,23 @@ const colorsData = [
   }
 ];
 
-const renderColoredDiamondSVG = (gradientId, size = 100) => {
+const renderDiamondImage = (diamond, sizeClass = "w-36 h-36") => {
   return (
-    <svg 
-      width={size} 
-      height={size} 
-      viewBox="0 0 100 100" 
-      className="transition-transform duration-700 group-hover:scale-110 filter drop-shadow-[0_0_15px_var(--glow-color)] select-none pointer-events-none"
-    >
-      <defs>
-        <linearGradient id={`grad-${gradientId}-1`} x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="var(--color-primary)" stopOpacity="0.8" />
-          <stop offset="50%" stopColor="var(--color-secondary)" stopOpacity="0.9" />
-          <stop offset="100%" stopColor="var(--color-tertiary)" stopOpacity="1" />
-        </linearGradient>
-        <linearGradient id={`grad-${gradientId}-2`} x1="100%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="var(--color-light)" stopOpacity="0.6" />
-          <stop offset="100%" stopColor="var(--color-dark)" stopOpacity="0.85" />
-        </linearGradient>
-      </defs>
-      
-      {/* Outer Outline */}
-      <polygon 
-        points="50,5 82,25 90,45 50,95 10,45 18,25" 
-        stroke="var(--color-stroke)" 
-        strokeWidth="0.8" 
-        fill={`url(#grad-${gradientId}-1)`} 
+    <div className={`relative ${sizeClass} flex items-center justify-center select-none`}>
+      {/* Soft backlighting matching the diamond's hue */}
+      <div 
+        className="absolute inset-2 rounded-full blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
+        style={{
+          background: `radial-gradient(circle, var(--glow-color) 0%, transparent 70%)`
+        }}
       />
-      
-      {/* Table (Center Flat Top) */}
-      <polygon 
-        points="50,15 70,25 50,35 30,25" 
-        fill={`url(#grad-${gradientId}-2)`} 
-        opacity="0.9" 
-        stroke="var(--color-stroke)" 
-        strokeWidth="0.5" 
+      <img 
+        src={diamond.image} 
+        alt={diamond.name}
+        className="relative z-10 w-full h-full object-contain filter drop-shadow-[0_12px_28px_var(--glow-color)] transition-all duration-700 group-hover:scale-110 group-hover:rotate-6 select-none pointer-events-none"
+        loading="lazy"
       />
-      
-      {/* Crown Star Facets */}
-      <polygon points="50,5 50,15 30,25" fill="var(--color-light)" opacity="0.4" stroke="var(--color-stroke)" strokeWidth="0.4" />
-      <polygon points="50,5 70,25 50,15" fill="var(--color-dark)" opacity="0.3" stroke="var(--color-stroke)" strokeWidth="0.4" />
-      <polygon points="18,25 30,25 50,15" fill="var(--color-primary)" opacity="0.5" stroke="var(--color-stroke)" strokeWidth="0.4" />
-      <polygon points="82,25 50,15 70,25" fill="var(--color-secondary)" opacity="0.5" stroke="var(--color-stroke)" strokeWidth="0.4" />
-      
-      {/* Upper Girdle Facets */}
-      <polygon points="18,25 10,45 30,25" fill="var(--color-dark)" opacity="0.4" stroke="var(--color-stroke)" strokeWidth="0.4" />
-      <polygon points="82,25 70,25 90,45" fill="var(--color-light)" opacity="0.4" stroke="var(--color-stroke)" strokeWidth="0.4" />
-      <polygon points="30,25 50,35 10,45" fill="var(--color-primary)" opacity="0.6" stroke="var(--color-stroke)" strokeWidth="0.4" />
-      <polygon points="70,25 90,45 50,35" fill="var(--color-secondary)" opacity="0.6" stroke="var(--color-stroke)" strokeWidth="0.4" />
-      <polygon points="10,45 50,45 30,25" fill="var(--color-light)" opacity="0.3" stroke="var(--color-stroke)" strokeWidth="0.4" />
-      <polygon points="90,45 70,25 50,45" fill="var(--color-dark)" opacity="0.3" stroke="var(--color-stroke)" strokeWidth="0.4" />
-      <polygon points="50,35 50,45 10,45" fill="var(--color-secondary)" opacity="0.5" stroke="var(--color-stroke)" strokeWidth="0.4" />
-      <polygon points="50,35 90,45 50,45" fill="var(--color-primary)" opacity="0.5" stroke="var(--color-stroke)" strokeWidth="0.4" />
-      
-      {/* Lower Pavilion Facets */}
-      <polygon points="10,45 50,95 28,45" fill="var(--color-dark)" opacity="0.55" stroke="var(--color-stroke)" strokeWidth="0.4" />
-      <polygon points="90,45 72,45 50,95" fill="var(--color-light)" opacity="0.55" stroke="var(--color-stroke)" strokeWidth="0.4" />
-      <polygon points="28,45 50,95 50,45" fill={`url(#grad-${gradientId}-2)`} opacity="0.7" stroke="var(--color-stroke)" strokeWidth="0.4" />
-      <polygon points="72,45 50,45 50,95" fill={`url(#grad-${gradientId}-2)`} opacity="0.8" stroke="var(--color-stroke)" strokeWidth="0.4" />
-    </svg>
+    </div>
   );
 };
 
@@ -395,9 +366,9 @@ const FancyColors = () => {
                   </span>
                 </div>
 
-                {/* Center visual: SVG Diamond glowing */}
-                <div className="relative z-10 py-8 flex justify-center items-center">
-                  {renderColoredDiamondSVG(diamond.id, 130)}
+                {/* Center visual: Realistic Photorealistic Diamond */}
+                <div className="relative z-10 py-6 flex justify-center items-center">
+                  {renderDiamondImage(diamond, "w-36 h-36 sm:w-44 sm:h-44")}
                 </div>
 
                 {/* Bottom metadata */}
@@ -460,8 +431,8 @@ const FancyColors = () => {
               
               {/* Header */}
               <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
-                <div className="p-4 bg-white/[0.02] border border-white/5 rounded-2xl flex justify-center items-center">
-                  {renderColoredDiamondSVG(selectedDiamond.id, 90)}
+                <div className="p-3 bg-white/[0.03] border border-white/10 rounded-2xl flex justify-center items-center">
+                  {renderDiamondImage(selectedDiamond, "w-24 h-24 sm:w-28 sm:h-28")}
                 </div>
                 <div>
                   <span className="text-[#B88A6A] text-xs uppercase tracking-widest font-semibold block mb-1">

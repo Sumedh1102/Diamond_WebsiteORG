@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const shapesData = {
   round: {
     name: "Round",
-    image: "/diamond_images/trimmed/round.png",
+    image: "/diamond_images/trimmed/round.webp",
     tagline: "Timeless brilliant-cut circles with unmatched fire and sparkle",
     description: "Precisely calibrated round brilliant layouts, matched in diameter, proportions, and light performance for solitaires, eternity bands, and pavé settings.",
     largeSizes: [
@@ -34,7 +34,7 @@ const shapesData = {
   },
   emerald: {
     name: "Emerald",
-    image: "/diamond_images/trimmed/emerald.png",
+    image: "/diamond_images/trimmed/emerald.webp",
     tagline: "Elegant step-cut outlines with clean, sophisticated symmetry",
     description: "Precisely calibrated step-cut layouts engineered for sleek, high-end designs, eternity bands, and multi-stone arrangements.",
     largeSizes: [
@@ -70,7 +70,7 @@ const shapesData = {
   },
   oval: {
     name: "Oval",
-    image: "/diamond_images/trimmed/oval.png",
+    image: "/diamond_images/trimmed/oval.webp",
     tagline: "Elongated brilliance with perfect visual weight distribution",
     description: "Expertly matched oval layout sequences showing seamless fire, depth, and proportion consistency across all sizes.",
     largeSizes: [
@@ -98,7 +98,7 @@ const shapesData = {
   },
   marquise: {
     name: "Marquise",
-    image: "/diamond_images/trimmed/marquise.png",
+    image: "/diamond_images/trimmed/marquise.webp",
     tagline: "Striking slender profiles with exceptional fire and sharp points",
     description: "Highly calibrated marquise layouts showing meticulously aligned wing curves and identical length-to-width ratios.",
     largeSizes: [
@@ -132,7 +132,7 @@ const shapesData = {
   },
   pear: {
     name: "Pear",
-    image: "/diamond_images/trimmed/pear.png",
+    image: "/diamond_images/trimmed/pear.webp",
     tagline: "Graceful teardrop elegance offering supreme contour fluidics",
     description: "Flawlessly proportioned pear layouts calibrated to avoid Bow-tie effects, perfectly matching in symmetry and curves.",
     largeSizes: [
@@ -168,7 +168,7 @@ const shapesData = {
   },
   asscher: {
     name: "Asscher",
-    image: "/diamond_images/trimmed/asscher.png",
+    image: "/diamond_images/trimmed/asscher.webp",
     tagline: "Vintage step-cut hall-of-mirrors effect with deep visual corridors",
     description: "Highly prized square-cut layouts showcasing beautifully matching concentric patterns and perfectly cropped corners.",
     largeSizes: [
@@ -204,7 +204,7 @@ const shapesData = {
   },
   princess: {
     name: "Princess",
-    image: "/diamond_images/trimmed/princess.png",
+    image: "/diamond_images/trimmed/princess.webp",
     tagline: "Bold square silhouettes with intensely vibrant modern brilliance",
     description: "Perfectly parallel lines and sharp 90-degree corners, precisely matched in fire and light performance for jewelry bands.",
     largeSizes: [
@@ -240,7 +240,7 @@ const shapesData = {
   },
   radiant: {
     name: "Radiant",
-    image: "/diamond_images/trimmed/radiant.png",
+    image: "/diamond_images/trimmed/radiant.webp",
     tagline: "Robust cut-corner profiles infused with brilliant faceting",
     description: "An incredible blend of emerald-like contours and round brilliant-style sparkle, precisely calibrated to millimetre accuracy.",
     largeSizes: [
@@ -271,7 +271,7 @@ const shapesData = {
   },
   cushion: {
     name: "Cushion",
-    image: "/diamond_images/trimmed/cushion.png",
+    image: "/diamond_images/trimmed/cushion.webp",
     tagline: "Soft pillow-like borders offering highly romantic fire",
     description: "Classic cushion matching layout lines showing smooth pillowy edges and uniform corner curves for delicate jewelry sets.",
     largeSizes: [
@@ -297,7 +297,7 @@ const shapesData = {
   },
   heart: {
     name: "Heart",
-    image: "/diamond_images/trimmed/heart.png",
+    image: "/diamond_images/trimmed/heart.webp",
     tagline: "Unmatched romantic contours with perfect visual balance",
     description: "Incredibly difficult to match, our heart layouts are selected with immaculate lobe curves and cleft depths for custom jewels.",
     largeSizes: [
