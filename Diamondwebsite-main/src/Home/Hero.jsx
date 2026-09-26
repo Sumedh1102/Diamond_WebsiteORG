@@ -68,7 +68,8 @@ export default function KapuGemsHero() {
             <div className="absolute inset-0 flex flex-col justify-between items-center pointer-events-none z-10 py-10 sm:py-16 md:py-20 px-6 text-center">
               {/* TOP TEXT */}
               <div className="space-y-2 mt-4 sm:mt-6">
-                <p className="text-[#B88A6A] text-sm sm:text-lg md:text-xl lg:text-2xl tracking-[0.2em] sm:tracking-[0.4em] uppercase font-bold drop-shadow-md text-balance">
+                {/* extra left padding = the letter-spacing after the last letter, so the text sits centred in the frame */}
+                <p className="inline-block border-2 sm:border-4 border-white py-2 sm:py-3 pl-[calc(1rem+0.2em)] pr-4 sm:pl-[calc(1.5rem+0.4em)] sm:pr-6 text-[#B88A6A] text-sm sm:text-lg md:text-xl lg:text-2xl tracking-[0.2em] sm:tracking-[0.4em] uppercase font-bold drop-shadow-md text-balance">
                   Manufacturers & Exporters
                 </p>
                 <div className="w-12 sm:w-16 h-[1px] bg-gradient-to-r from-transparent via-[#B88A6A] to-transparent mx-auto opacity-75" />
