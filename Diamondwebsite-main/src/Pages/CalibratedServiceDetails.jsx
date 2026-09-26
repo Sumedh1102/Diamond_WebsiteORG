@@ -27,7 +27,7 @@ const CalibratedServiceDetails = () => {
           <section className="relative">
             <div className="absolute -left-6 top-0 w-1 h-20 bg-gradient-to-b from-white/40 to-transparent" />
             
-            <div className="bg-white/5 border border-white/10 rounded-3xl p-8 sm:p-10 hover:bg-white/[0.08] transition-all duration-300 mb-16">
+            <div className="bg-white/5 border border-white/10 rounded-3xl p-8 sm:p-10 hover:bg-white/[0.08] transition-all duration-300">
               <p className="text-[#B88A6A] text-xs tracking-[0.3em] uppercase mb-3 font-light">
                 All you need, everything you want.
               </p>
@@ -69,95 +69,6 @@ const CalibratedServiceDetails = () => {
                 </svg>
                 Chat on WhatsApp
               </a>
-            </div>
-
-            {/* Sub-categories */}
-            <div className="space-y-12">
-              {/* White Diamonds Card */}
-              <div className="relative bg-white/5 border border-white/10 rounded-3xl p-8 sm:p-10 hover:bg-white/[0.08] transition-all duration-300">
-                <div className="absolute -left-6 top-0 w-1 h-20 bg-gradient-to-b from-white/40 to-transparent" />
-                <p className="text-[#B88A6A] text-xs tracking-[0.3em] uppercase mb-3 font-light">
-                  Diamond Category
-                </p>
-                <h3 className="text-2xl sm:text-3xl font-light text-white mb-2">White Diamonds</h3>
-                <p className="text-[#B88A6A]/85 text-sm sm:text-base tracking-wider uppercase font-light mb-6 flex items-center gap-2">
-                  <span className="w-6 h-px bg-[#B88A6A]" /> Absolutely colorless.
-                </p>
-                <p className="text-base sm:text-lg leading-relaxed text-gray-300 font-light mb-8">
-                  Premium white diamonds known for their brilliance and clarity. These diamonds represent the purest form and are ideal for luxury jewelry pieces.
-                </p>
-                
-                {/* Specifications Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-6 border-t border-white/10">
-                  <div>
-                    <span className="block text-xs uppercase tracking-wider text-gray-500 mb-1">Color</span>
-                    <span className="text-white text-sm sm:text-base font-light">D to H color</span>
-                  </div>
-                  <div>
-                    <span className="block text-xs uppercase tracking-wider text-gray-500 mb-1">Quality</span>
-                    <span className="text-white text-sm sm:text-base font-light">IF to SI3 quality</span>
-                  </div>
-                  <div>
-                    <span className="block text-xs uppercase tracking-wider text-gray-500 mb-1">Size (Carat)</span>
-                    <span className="text-white text-sm sm:text-base font-light">0.003 ct to 0.35 ct</span>
-                  </div>
-                  <div>
-                    <span className="block text-xs uppercase tracking-wider text-gray-500 mb-1">Size (mm)</span>
-                    <span className="text-white text-sm sm:text-base font-light">0.8 mm to 4.2 mm</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* 100+ Shapes Card */}
-              <div className="relative bg-white/5 border border-white/10 rounded-3xl p-8 sm:p-10 hover:bg-white/[0.08] transition-all duration-300">
-                <div className="absolute -left-6 top-0 w-1 h-20 bg-gradient-to-b from-white/40 to-transparent" />
-                <p className="text-[#B88A6A] text-xs tracking-[0.3em] uppercase mb-3 font-light">
-                  Diamond Category
-                </p>
-                <h3 className="text-2xl sm:text-3xl font-light text-white mb-2">100+ Shapes</h3>
-                <p className="text-[#B88A6A]/85 text-sm sm:text-base tracking-wider uppercase font-light mb-6 flex items-center gap-2">
-                  <span className="w-6 h-px bg-[#B88A6A]" /> 100+ Shapes
-                </p>
-                <div className="space-y-6 text-base sm:text-lg leading-relaxed text-gray-300 font-light">
-                  <p className="text-white font-light text-lg">
-                    Yes, you read it right! Our artistic workshop delivers diamonds with a personal touch that brings undisputed elegance, customization and unsurpassed quality to your jewellery.
-                  </p>
-                  <p>
-                    Fancy shape Diamonds are any Diamonds that are not round in shape, such as princess, emerald, oval, pear, marquise, heart, and cushion cuts. These shapes are less common than the traditional round brilliant cut and can offer a unique look to a piece of jewelry. The value of a fancy shape diamond is based on the same 4Cs as a round diamond - cut, color, clarity, and carat weight.
-                  </p>
-                  <p>
-                    We can create diamonds of any shape in 30 days. Diamond shapes range from rounded to sharp angles. For example, oval cuts are extremely versatile and can fit into jewelry designs of all kinds. Princess cuts are popular with consumers who want a more attractive stone with a better cut.
-                  </p>
-                </div>
-                <button onClick={() => navigate('/diamonds')} className="mt-4 px-6 py-2 bg-[#B88A6A] text-white rounded-full hover:bg-[#B88A6A]/80 transition-colors">Explore Shapes</button>
-              </div>
-
-              {/* 30+ Fancy Colors Card */}
-              <div className="relative bg-white/5 border border-white/10 rounded-3xl p-8 sm:p-10 hover:bg-white/[0.08] transition-all duration-300">
-                <div className="absolute -left-6 top-0 w-1 h-20 bg-gradient-to-b from-white/40 to-transparent" />
-                <p className="text-[#B88A6A] text-xs tracking-[0.3em] uppercase mb-3 font-light">
-                  Diamond Category
-                </p>
-                <h3 className="text-2xl sm:text-3xl font-light text-white mb-2">30+ Fancy Colors</h3>
-                <p className="text-[#B88A6A]/85 text-sm sm:text-base tracking-wider uppercase font-light mb-6 flex items-center gap-2">
-                  <span className="w-6 h-px bg-[#B88A6A]" /> 30+ Fancy Colors
-                </p>
-                <div className="space-y-6 text-base sm:text-lg leading-relaxed text-gray-300 font-light">
-                  <p className="text-white font-light text-lg">
-                    With around 40+ years of experience and expertise in creating seamlessly authentic Diamonds, we have proudly built a successful track record of crafting one-of-a-kind Diamonds in over 30 fancy colors.
-                  </p>
-                  <p>
-                    We have a built-in inventory to deliver you your customized color within 30 days, be it any shade or tone.
-                  </p>
-                  <p>
-                    Chemically pure and structurally perfect Diamonds are colorless. Thankfully nature is not always perfect, and as a result, small traces of impurities or structural discrepancies result in Diamonds that exhibit different colors. If these occur in high enough concentrations, Diamonds exhibit strong and vibrant displays of color, known as fancy color.
-                  </p>
-                  <p>
-                    Fancy colored Diamonds are exceedingly rare compared to their colorless counterparts. Furthermore, their rarity is enhanced by the intensity of their color, and some fancy color are more rare than others.
-                  </p>
-                </div>
-                <button onClick={() => navigate('/fancy-colors')} className="mt-4 px-6 py-2 bg-[#B88A6A] text-white rounded-full hover:bg-[#B88A6A]/80 transition-colors">Explore Fancy Color Spectrum</button>
-              </div>
             </div>
           </section>
 
@@ -205,6 +116,95 @@ const CalibratedServiceDetails = () => {
               </div>
             </div>
           </section>
+
+          {/* Sub-categories */}
+          <div className="space-y-12">
+            {/* 100+ Shapes Card */}
+            <div className="relative bg-white/5 border border-white/10 rounded-3xl p-8 sm:p-10 hover:bg-white/[0.08] transition-all duration-300">
+              <div className="absolute -left-6 top-0 w-1 h-20 bg-gradient-to-b from-white/40 to-transparent" />
+              <p className="text-[#B88A6A] text-xs tracking-[0.3em] uppercase mb-3 font-light">
+                Diamond Category
+              </p>
+              <h3 className="text-2xl sm:text-3xl font-light text-white mb-2">100+ Shapes</h3>
+              <p className="text-[#B88A6A]/85 text-sm sm:text-base tracking-wider uppercase font-light mb-6 flex items-center gap-2">
+                <span className="w-6 h-px bg-[#B88A6A]" /> 100+ Shapes
+              </p>
+              <div className="space-y-6 text-base sm:text-lg leading-relaxed text-gray-300 font-light">
+                <p className="text-white font-light text-lg">
+                  Yes, you read it right! Our artistic workshop delivers diamonds with a personal touch that brings undisputed elegance, customization and unsurpassed quality to your jewellery.
+                </p>
+                <p>
+                  Fancy shape Diamonds are any Diamonds that are not round in shape, such as princess, emerald, oval, pear, marquise, heart, and cushion cuts. These shapes are less common than the traditional round brilliant cut and can offer a unique look to a piece of jewelry. The value of a fancy shape diamond is based on the same 4Cs as a round diamond - cut, color, clarity, and carat weight.
+                </p>
+                <p>
+                  We can create diamonds of any shape in 30 days. Diamond shapes range from rounded to sharp angles. For example, oval cuts are extremely versatile and can fit into jewelry designs of all kinds. Princess cuts are popular with consumers who want a more attractive stone with a better cut.
+                </p>
+              </div>
+              <button onClick={() => navigate('/diamonds')} className="mt-4 px-6 py-2 bg-[#B88A6A] text-white rounded-full hover:bg-[#B88A6A]/80 transition-colors">Explore Shapes</button>
+            </div>
+
+            {/* 30+ Fancy Colors Card */}
+            <div className="relative bg-white/5 border border-white/10 rounded-3xl p-8 sm:p-10 hover:bg-white/[0.08] transition-all duration-300">
+              <div className="absolute -left-6 top-0 w-1 h-20 bg-gradient-to-b from-white/40 to-transparent" />
+              <p className="text-[#B88A6A] text-xs tracking-[0.3em] uppercase mb-3 font-light">
+                Diamond Category
+              </p>
+              <h3 className="text-2xl sm:text-3xl font-light text-white mb-2">30+ Fancy Colors</h3>
+              <p className="text-[#B88A6A]/85 text-sm sm:text-base tracking-wider uppercase font-light mb-6 flex items-center gap-2">
+                <span className="w-6 h-px bg-[#B88A6A]" /> 30+ Fancy Colors
+              </p>
+              <div className="space-y-6 text-base sm:text-lg leading-relaxed text-gray-300 font-light">
+                <p className="text-white font-light text-lg">
+                  With around 40+ years of experience and expertise in creating seamlessly authentic Diamonds, we have proudly built a successful track record of crafting one-of-a-kind Diamonds in over 30 fancy colors.
+                </p>
+                <p>
+                  We have a built-in inventory to deliver you your customized color within 30 days, be it any shade or tone.
+                </p>
+                <p>
+                  Chemically pure and structurally perfect Diamonds are colorless. Thankfully nature is not always perfect, and as a result, small traces of impurities or structural discrepancies result in Diamonds that exhibit different colors. If these occur in high enough concentrations, Diamonds exhibit strong and vibrant displays of color, known as fancy color.
+                </p>
+                <p>
+                  Fancy colored Diamonds are exceedingly rare compared to their colorless counterparts. Furthermore, their rarity is enhanced by the intensity of their color, and some fancy color are more rare than others.
+                </p>
+              </div>
+              <button onClick={() => navigate('/fancy-colors')} className="mt-4 px-6 py-2 bg-[#B88A6A] text-white rounded-full hover:bg-[#B88A6A]/80 transition-colors">Explore Fancy Color Spectrum</button>
+            </div>
+
+            {/* White Diamonds Card */}
+            <div className="relative bg-white/5 border border-white/10 rounded-3xl p-8 sm:p-10 hover:bg-white/[0.08] transition-all duration-300">
+              <div className="absolute -left-6 top-0 w-1 h-20 bg-gradient-to-b from-white/40 to-transparent" />
+              <p className="text-[#B88A6A] text-xs tracking-[0.3em] uppercase mb-3 font-light">
+                Diamond Category
+              </p>
+              <h3 className="text-2xl sm:text-3xl font-light text-white mb-2">White Diamonds</h3>
+              <p className="text-[#B88A6A]/85 text-sm sm:text-base tracking-wider uppercase font-light mb-6 flex items-center gap-2">
+                <span className="w-6 h-px bg-[#B88A6A]" /> Absolutely colorless.
+              </p>
+              <p className="text-base sm:text-lg leading-relaxed text-gray-300 font-light mb-8">
+                Premium white diamonds known for their brilliance and clarity. These diamonds represent the purest form and are ideal for luxury jewelry pieces.
+              </p>
+              
+              {/* Specifications Grid */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-6 border-t border-white/10">
+                <div>
+                  <span className="block text-xs uppercase tracking-wider text-gray-500 mb-1">Color</span>
+                  <span className="text-white text-sm sm:text-base font-light">D to H color</span>
+                </div>
+                <div>
+                  <span className="block text-xs uppercase tracking-wider text-gray-500 mb-1">Quality</span>
+                  <span className="text-white text-sm sm:text-base font-light">IF to SI3 quality</span>
+                </div>
+                <div>
+                  <span className="block text-xs uppercase tracking-wider text-gray-500 mb-1">Size (Carat)</span>
+                  <span className="text-white text-sm sm:text-base font-light">0.003 ct to 0.35 ct</span>
+                </div>
+                <div>
+                  <span className="block text-xs uppercase tracking-wider text-gray-500 mb-1">Size (mm)</span>
+                  <span className="text-white text-sm sm:text-base font-light">0.8 mm to 4.2 mm</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="mt-32 p-12 rounded-3xl bg-white/5 border border-white/10 text-center">
